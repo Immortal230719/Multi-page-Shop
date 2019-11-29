@@ -1,7 +1,7 @@
 <nav class="header">
   <ul class="header_menu">
-    <li class="header_search" tabindex="0"><img src="img/header/searching.svg" alt="searching"></li>
-    <li class="header_select" tabindex="0">
+    <li class="header_search unselectable" tabindex="0"><img src="img/header/searching.svg" alt="searching"></li>
+    <li class="header_select unselectable" tabindex="0">
       <div class="header_hamburger">
         <span></span>
         <span></span>
@@ -12,9 +12,33 @@
         <span>category</span>
       </p>
     </li>
-    <li class="header_item" tabindex="0"><h1 class="header_title">agora</h1></li>
-    <li class="header_login" tabindex="0"><img src="img/header/login.svg" alt="login"></li>
-    <li class="header_like" tabindex="0"><img src="img/header/heart.svg" alt="heart"></li>
-    <li class="header_basket" tabindex="0"><img src="img/header/basket.svg" alt="basket"></li>
+    <li class="header_item unselectable" tabindex="0"><h1 class="header_title">agora</h1></li>
+    <li class="header_login unselectable" tabindex="0"><img src="img/header/login.svg" alt="login"></li>
+    <li class="header_like unselectable" tabindex="0"><img src="img/header/heart.svg" alt="heart"></li>
+    <li class="header_basket unselectable" tabindex="0"><img src="img/header/basket.svg" alt="basket"></li>
   </ul>
+  <div class="hidden">
+    <div class="sign">
+      <div class="sign_title">
+        Sign in
+      </div>
+      <form action="#" class="sign_form">
+        <div class="sign_wrapper">
+          <input tabindex="0" type="email" name="email" placeholder="E-mail">
+          <input tabindex="0" type="password" name="password"placeholder="password">
+          <a class="sign_forget" tabindex="0" href="#" target="_blank">Forgotyour password?</a>
+        </div>      
+        <button tabindex="0" type="submit" class="sign_btn">Sign in</button>
+      </form>
+    </div>
+  </div>
+  <div class="over-flow">
+    <div class="search">
+      <form action="#" class="search_form">
+        <span tabindex="0" class="search_close">&times;</span>
+        <input tabindex="0" type="text" class="search_input" placeholder="Type to search">
+        <button tabindex="0" class="search_btn"><img src="img/header/searching.svg" alt="searching"></button>
+      </form>
+    </div>
+  </div>
 </nav>

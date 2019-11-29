@@ -5,7 +5,7 @@
 
 $main-color: #606070;
 $main-color2: #3a54d6;
-$text-color1: #ffffff;
+$text-color: #ffffff;
 
 * {
   box-sizing: border-box;
@@ -25,6 +25,24 @@ $text-color1: #ffffff;
   &_active {
     display: block;
   }
+}
+
+.over-flow {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  &_animate {
+    left: 0;
+  }
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 p,

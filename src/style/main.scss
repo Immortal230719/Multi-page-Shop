@@ -1,0 +1,44 @@
+@import "partials/fonts.scss";
+@import "partials/reset.scss";
+
+//variables
+
+$main-color: #606070;
+$main-color2: #3a54d6;
+$text-color1: #ffffff;
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline-color: $main-color2;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.hidden {
+  display: none;
+  transition: 0.6s all;
+  &_active {
+    display: block;
+  }
+}
+
+p,
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "partials/header.scss";

@@ -21,9 +21,14 @@ $text-color: #ffffff;
 
 .hidden {
   display: none;
-  transition: 0.6s all;
   &_active {
     display: block;
+  }
+  &_grid {
+    display: grid;
+  }
+  &_flex {
+    display: flex;
   }
 }
 

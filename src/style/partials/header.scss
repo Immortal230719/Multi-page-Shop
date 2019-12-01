@@ -2,7 +2,7 @@
   position: relative;
   height: 75px;
   width: 100%;
-  &_menu {
+  &_nav {
     height: 75px;
     display: flex;
     box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.404);
@@ -72,7 +72,7 @@
 
 .sign {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   right: 8%;
   top: 65px;
   width: 375px;
@@ -172,5 +172,184 @@
     height: 75px;
     box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0.3);
     background-color: $main-color2;
+  }
+}
+
+.basket-cart {
+  position: absolute;
+  z-index: 10;
+  right: 1%;
+  top: 65px;
+  min-height: 125px;
+  width: 375px;
+  box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  &_title {
+    height: 65px;
+    padding: 20px 0 0 45px;
+    background: url("../img/header/basket_card.svg") right 24px center no-repeat
+      #f7f7f7;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    font-family: "Oswald";
+    font-size: 18px;
+    color: #111111;
+    span {
+      color: $main-color2;
+    }
+  }
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 9px 24px;
+    height: 90px;
+    border-bottom: solid 1px #e6e6e6;
+    background-color: #ffffff;
+  }
+  &_img {
+    margin-right: 30px;
+  }
+  &_btn {
+    width: 375px;
+    height: 60px;
+    background-color: $main-color2;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-color;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+  }
+  &_price {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #111111;
+    span {
+      font-weight: 600;
+      color: $main-color2;
+    }
+  }
+  &_close {
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    cursor: pointer;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 75px;
+  left: 80px;
+  width: 0;
+  height: 450px;
+  padding: 74px 0;
+  box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15),
+    inset 0px -1px 0 0 rgba(255, 255, 255, 0.3);
+  background-color: $main-color;
+  transition: 1.2s all;
+  &_animate {
+    width: 1645px;
+    &_span {
+      position: absolute;
+      left: 75px;
+      top: 75px;
+      display: block;
+      width: 5px;
+      height: 0;
+      background-color: $main-color;
+      box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15),
+        inset 0px -1px 0 0 rgba(255, 255, 255, 0.3);
+      transition: 0.7s all;
+      &_disapear {
+        height: 450px;
+      }
+    }
+  }
+  &_grid {
+    display: grid;
+    grid-template-columns: 249px 249px 249px 249px 374px 275px;
+    grid-template-rows: 300px;
+  }
+  &_column {
+    border-right: 1px dotted #ffffff69;
+    &:nth-child(6) {
+      border: none;
+    }
+    ul {
+      padding-left: 75px;
+    }
+  }
+  &_title {
+    font-family: "Oswald";
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 18px;
+    margin-bottom: 22px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  &_link {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.5;
+    color: #bdc7fc;
+  }
+  &_geo {
+    li {
+      position: relative;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.67;
+      color: #bdc7fc;
+      padding-left: 56px;
+      span {
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      a {
+        color: #bdc7fc;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        top: 6px;
+      }
+      &:nth-child(2) {
+        margin-top: 53px;
+      }
+      &:nth-child(3) {
+        margin-top: 53px;
+      }
+    }
+  }
+  &_contacts {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 3.7;
+    li {
+      &:nth-child(1) {
+        line-height: 12px;
+        margin-bottom: 12px;
+      }
+    }
+    a {
+      color: #ffffff;
+    }
   }
 }

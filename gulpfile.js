@@ -106,8 +106,8 @@ gulp.task(
     "html:build",
     "js:build",
     "style:build",
-    "fonts:build",
-    "image:build"
+    "fonts:build"
+    // "image:build"
   )
 );
 

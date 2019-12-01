@@ -18,8 +18,8 @@ const animateSpan = document.querySelector(".menu_animate_span");
 
 const basketQuanity = document.querySelector(".basket-cart_title > span");
 const cartCase = document.querySelector(".basket-cart_wrapper");
-// events
 
+// events
 navLoginBtn.addEventListener("click", () => {
   //delete open elements
   basketCart.parentElement.classList.remove("hidden_active");
@@ -52,22 +52,32 @@ cartCase.addEventListener("click", e => {
   } else return;
 });
 
-navSelectBtn.addEventListener("mousedown", e => {
-  if (e.target.className === "header_select unselectable") {
-    basketCart.parentElement.classList.remove("hidden_active");
-    signForm.parentElement.classList.remove("hidden_active");
-    navSelectBtn.classList.add("active");
-    console.dir(navSelectBtn);
-    animateSpan.classList.add("menu_animate_span_disapear");
-    setTimeout(() => menu.classList.add("menu_animate"), 600);
-    setTimeout(() => menu.firstElementChild.classList.add("hidden_grid"), 1500);
+navSelectBtn.addEventListener("click", e => {
+  if (animateSpan.className === "menu_animate_span") {
+    requestAnimationFrame(animateMenu);
   } else {
-    navSelectBtn.classList.remove("active");
-    menu.firstElementChild.classList.remove("hidden_grid");
-    menu.classList.remove("menu_animate");
-    setTimeout(
-      () => animateSpan.classList.remove("menu_animate_span_disapear"),
-      1200
-    );
+    requestAnimationFrame(disapearMenu);
   }
 });
+
+// functions
+
+function animateMenu() {
+  basketCart.parentElement.classList.remove("hidden_active");
+  signForm.parentElement.classList.remove("hidden_active");
+  navSelectBtn.classList.add("active");
+  console.dir(navSelectBtn);
+  animateSpan.classList.add("menu_animate_span_disapear");
+  setTimeout(() => menu.classList.add("menu_animate"), 600);
+  setTimeout(() => menu.firstElementChild.classList.add("hidden_grid"), 1500);
+}
+
+function disapearMenu() {
+  navSelectBtn.classList.remove("active");
+  menu.firstElementChild.classList.remove("hidden_grid");
+  menu.classList.remove("menu_animate");
+  setTimeout(
+    () => animateSpan.classList.remove("menu_animate_span_disapear"),
+    1200
+  );
+}

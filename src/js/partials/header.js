@@ -52,8 +52,16 @@ cartCase.addEventListener("click", e => {
   } else return;
 });
 
-navSelectBtn.addEventListener("click", e => {
+navSelectBtn.addEventListener("click", () => {
   if (animateSpan.className === "menu_animate_span") {
+    requestAnimationFrame(animateMenu);
+  } else {
+    requestAnimationFrame(disapearMenu);
+  }
+});
+
+navSelectBtn.addEventListener("keypress", e => {
+  if (animateSpan.className === "menu_animate_span" && e.code === "Space") {
     requestAnimationFrame(animateMenu);
   } else {
     requestAnimationFrame(disapearMenu);
@@ -66,7 +74,6 @@ function animateMenu() {
   basketCart.parentElement.classList.remove("hidden_active");
   signForm.parentElement.classList.remove("hidden_active");
   navSelectBtn.classList.add("active");
-  console.dir(navSelectBtn);
   animateSpan.classList.add("menu_animate_span_disapear");
   setTimeout(() => menu.classList.add("menu_animate"), 600);
   setTimeout(() => menu.firstElementChild.classList.add("hidden_grid"), 1500);

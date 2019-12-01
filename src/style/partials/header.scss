@@ -29,6 +29,10 @@
   &_item {
     width: 75%;
     text-align: center;
+    font-family: "Montserrat";
+    font-size: 21px;
+    letter-spacing: 2.1px;
+    color: #fffefe;
   }
   &_search {
     width: 75px;
@@ -36,6 +40,10 @@
   &_select {
     width: 190px;
     display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     p {
       height: 30px;
       font-family: "Poppins";
@@ -62,12 +70,6 @@
         margin-bottom: 0;
       }
     }
-  }
-  &_title {
-    font-family: "Montserrat";
-    font-size: 21px;
-    letter-spacing: 2.1px;
-    color: #fffefe;
   }
   &_login {
     width: 75px;

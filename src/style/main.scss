@@ -1,5 +1,7 @@
 @import "partials/fonts.scss";
-@import "partials/reset.scss";
+@import "lib/reset.scss";
+@import "lib/slick.scss";
+@import "lib/slick-theme.scss";
 
 //variables
 
@@ -65,3 +67,4 @@ a {
 }
 
 @import "partials/header.scss";
+@import "partials/slider.scss";

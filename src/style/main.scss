@@ -1,3 +1,5 @@
+//some libs
+
 @import "partials/fonts.scss";
 @import "lib/reset.scss";
 @import "lib/slick.scss";
@@ -15,6 +17,8 @@ $text-color: #ffffff;
     outline-color: $main-color2;
   }
 }
+
+// my classes
 
 .container {
   margin: 0 auto;
@@ -52,19 +56,51 @@ $text-color: #ffffff;
   user-select: none;
 }
 
-p,
-body {
-  margin: 0;
+// grids
+
+.grid-375 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-auto-rows: 375px;
+  grid-auto-flow: dense;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  &_wrapper {
+    box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  }
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.grid-250 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  &_wrapper {
+    box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  }
 }
 
-a {
-  text-decoration: none;
+.grid-big {
+  grid-row-end: span 2;
+  grid-column-end: span 2;
 }
+
+.grid-long {
+  grid-column-end: span 2;
+}
+
+.grid-tall {
+  grid-row-end: span 2;
+}
+
+.products {
+  position: relative;
+  top: -75px;
+}
+// partial files
 
 @import "partials/header.scss";
 @import "partials/slider.scss";
+@import "partials/features.scss";
+@import "partials/product.scss";
+@import "partials/deal.scss";

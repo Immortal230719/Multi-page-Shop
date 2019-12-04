@@ -1,4 +1,7 @@
+"Use Strict";
+
 //= lib/slick.min.js
+//= lib/products.js
 
 $(document).ready(function() {
   // promo-slider
@@ -22,3 +25,4 @@ $(document).ready(function() {
 });
 
 //= partials/header.js
+//= partials/render.js

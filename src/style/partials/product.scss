@@ -1,0 +1,77 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 50px;
+  &_img {
+    height: 205px;
+    background: rgba(109, 109, 109, 0.562);
+  }
+  &_title {
+    margin-top: 25px;
+    font-family: "Oswald";
+    font-size: 17px;
+    color: #111111;
+  }
+  &_price {
+    margin-top: 10px;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    color: $main-color2;
+  }
+}
+
+.new-product {
+  height: 100%;
+  padding: 60px;
+  background: url("") center (center / cover) no-repeat $main-color2;
+  box-shadow: inset -0.7px -0.7px 0 0 #e6e6e6;
+  &_sticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #111111;
+    font-family: "Poppins";
+    font-size: 11px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  &_category {
+    margin-top: 50px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  &_title {
+    margin-top: 22px;
+    font-family: "Oswald";
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    span {
+      text-transform: uppercase;
+    }
+  }
+  &_btn {
+    margin-top: 46px;
+    width: 160px;
+    height: 50px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1),
+      inset 0px 1px 0 0 rgba(255, 255, 255, 0.1);
+    background-color: rgb(98, 173, 231);
+    border-radius: 30px;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,59 @@
+.features {
+  &_box {
+    position: relative;
+    top: -75px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 70px 0 70px;
+    background-color: #ffffff;
+    box-shadow: inset -1px 0px 0 0 #e6e6e6;
+  }
+  &_img {
+    align-self: center;
+  }
+  &_title {
+    margin-top: 30px;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 18px;
+    color: #111111;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &_descr {
+    margin-top: 24px;
+    font-family: "Poppins";
+    font-size: 13px;
+    line-height: 1.92;
+    letter-spacing: normal;
+    text-align: center;
+    color: #888888;
+  }
+  &_more {
+    margin-top: 35px;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #3a54d6;
+    label {
+      cursor: pointer;
+    }
+    img {
+      position: relative;
+      top: 1px;
+      left: 7px;
+    }
+    input,
+    div {
+      display: none;
+    }
+    input:checked ~ div {
+      display: block;
+    }
+  }
+}

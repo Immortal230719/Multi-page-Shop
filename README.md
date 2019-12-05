@@ -10,6 +10,8 @@ npm install
 
 Run project with gulp command
 ```
+gulp image:build
+
 gulp
 ```
 Enjoy!

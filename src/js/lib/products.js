@@ -17,14 +17,15 @@ const products = [
     name: "Jordan Galaxy",
     price: "$ 599.00",
     image: "url",
-    new: false
+    new: false,
+    discount: 30
   },
   {
     name: "Nike Air Footscape Magista Flyknit",
     price: "$ 235.00",
     image: "url",
     new: false,
-    discount: "-30%"
+    discount: 30
   },
   {
     name: "KD 8 Premium AS iD",
@@ -48,7 +49,8 @@ const products = [
     name: "Jordan Horizon",
     price: "$ 230.00",
     image: "url",
-    new: false
+    new: false,
+    discount: 30
   },
   {
     name: "Air Jordan XX9 Low",
@@ -66,6 +68,69 @@ const products = [
     name: "Air Jordan Spike 40 iD",
     price: "$ 220.00",
     image: "url",
+    new: false,
+    discount: 50
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: true
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: true,
+    discount: 40
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false,
+    discount: 20
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
     new: false
   },
   {
@@ -78,6 +143,18 @@ const products = [
     name: "Air Jordan Spike 40 iD",
     price: "$ 220.00",
     image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Air Jordan Spike 40 iD",
+    price: "$ 220.00",
+    image: "url",
     new: true
   },
   {
@@ -87,20 +164,92 @@ const products = [
     new: false
   },
   {
-    name: "Air Jordan Spike 40 iD",
-    price: "$ 220.00",
+    name: "Jordan Horizon",
+    price: "$ 230.00",
     image: "url",
     new: false
   },
   {
-    name: "Air Jordan Spike 40 iD",
-    price: "$ 220.00",
+    name: "Jordan Horizon",
+    price: "$ 230.00",
     image: "url",
     new: false
   },
   {
-    name: "Air Jordan Spike 40 iD",
-    price: "$ 220.00",
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: true
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: true
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
+    image: "url",
+    new: false
+  },
+  {
+    name: "Jordan Horizon",
+    price: "$ 230.00",
     image: "url",
     new: false
   }

@@ -18,8 +18,11 @@ const animateSpan = document.querySelector(".menu_animate_span");
 
 const basketQuanity = document.querySelector(".basket-cart_title > span");
 const cartCase = document.querySelector(".basket-cart_wrapper");
+const basketCounter = document.querySelector(".header_basket_counter");
 
 // events
+
+//show Login Form
 navLoginBtn.addEventListener("click", () => {
   //delete open elements
   basketCart.parentElement.classList.remove("hidden_active");
@@ -28,30 +31,40 @@ navLoginBtn.addEventListener("click", () => {
   signForm.parentElement.classList.toggle("hidden_active");
 });
 
+//show Search Form
 navSearchBtn.addEventListener("click", () => {
   basketCart.parentElement.classList.remove("hidden_active");
   signForm.parentElement.classList.remove("hidden_active");
   searchForm.parentElement.classList.toggle("over-flow_animate");
 });
 
+//close Search Form
 searchClose.addEventListener("click", () => {
   searchForm.parentElement.classList.toggle("over-flow_animate");
 });
 
+// show hidden Basket
 basketCartBtn.addEventListener("click", () => {
   signForm.parentElement.classList.remove("hidden_active");
   basketCart.parentElement.classList.toggle("hidden_active");
 });
 
+//remove Element in basket
 cartCase.addEventListener("click", e => {
   let numOfItems = cartCase.children.length;
   if (e.target.className === "basket-cart_close") {
     e.target.parentElement.remove();
     numOfItems--;
     basketQuanity.textContent = numOfItems;
-  } else return;
+    basketCounter.textContent = numOfItems;
+  }
+  if (numOfItems === 0) {
+    basketCounter.classList.add("hidden");
+  }
+  return;
 });
 
+//show Menu
 navSelectBtn.addEventListener("click", () => {
   if (animateSpan.className === "menu_animate_span") {
     requestAnimationFrame(animateMenu);

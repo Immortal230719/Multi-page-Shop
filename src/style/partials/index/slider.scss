@@ -4,6 +4,13 @@
   background-color: $main-color;
   padding: 125px 0 200px 0;
   outline: none;
+  &_content {
+    position: relative;
+    width: 1300px;
+    padding: 25px;
+    outline: none;
+    height: 550px;
+  }
   &_collection {
     position: absolute;
     top: 25px;
@@ -71,12 +78,4 @@
     left: 23.5%;
     bottom: 28px;
   }
-}
-
-.slick-slide {
-  position: relative;
-  width: 1300px;
-  height: 550px;
-  padding: 25px;
-  outline: none;
 }

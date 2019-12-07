@@ -1,0 +1,112 @@
+.footer {
+  width: 100%;
+  min-height: 335px;
+  background-color: #222222;
+  padding: 85px 75px 95px 75px;
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_agora {
+    width: 408px;
+    &_title {
+      font-family: "Montserrat";
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      color: #fffefe;
+    }
+    &_descr {
+      margin-top: 25px;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.67;
+      text-align: left;
+      color: #555555;
+    }
+    &_links {
+      margin-top: 25px;
+      font-family: "Poppins";
+      font-size: 14px;
+      a {
+        color: #888888;
+        margin-right: 30px;
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+      }
+    }
+    &_copy-right {
+      margin-top: 18px;
+      font-family: "Poppins";
+      font-size: 12px;
+      color: #555555;
+    }
+  }
+  &_help {
+    &_title {
+      font-family: "Oswald";
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    &_link {
+      margin-bottom: 7px;
+      a {
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 300;
+        color: #888888;
+      }
+    }
+  }
+  &_about {
+    &_title {
+      font-family: "Oswald";
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    &_link {
+      margin-bottom: 7px;
+      a {
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 300;
+        color: #888888;
+      }
+    }
+  }
+  &_social {
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &_links {
+      a {
+        margin-left: 23px;
+      }
+    }
+  }
+  &_pay {
+    margin-top: 82px;
+    &_methods {
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 300;
+      text-align: right;
+      color: #555555;
+    }
+    &_links {
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -123,25 +123,16 @@
     font-weight: 500;
     text-align: center;
     color: $text-color;
-    label {
-      cursor: pointer;
-    }
     img {
       position: relative;
-      top: 1px;
+      top: 2px;
       left: 7px;
-    }
-    input,
-    div {
-      display: none;
-    }
-    input:checked ~ div {
-      display: block;
     }
   }
 }
 
 .load_more {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

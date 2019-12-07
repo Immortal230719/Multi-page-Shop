@@ -11,7 +11,7 @@
 
 <!-- header -->
 
-  <header>
+  <header id="up">
     //= template/header.html
   </header>
 
@@ -28,52 +28,41 @@
   <section class="features">
     <h2 class="hidden">Features</h2>
     <div class="container">
-      <div class="features_box grid-375">
-        <div class="features_wrapper">
-          <img src="img/features/promo_basket.svg" alt="basket" class="features_img">
-          <h3 class="features_title">Free Shipping</h3>
-          <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-          <div class="features_more">
-              <input type="checkbox" id="basket_more">
-              <label for="basket_more">More Info  <img src="img/features/more.svg" alt="more"></label>
-              <div>The killer is Sherlock Holmes!</div>            
+      <div class="features_box">
+        <div class="grid-375">
+          <div class="features_wrapper">
+            <img src="img/features/promo_basket.svg" alt="basket" class="features_img">
+            <h3 class="features_title">Free Shipping</h3>
+            <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
+            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
           </div>
-        </div>
-        <div class="features_wrapper">
-          <img src="img/features/24hour.svg" alt="24hour" class="features_img">
-          <h3 class="features_title">24/7 Technical Support</h3>
-          <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-          <div class="features_more">
-              <input type="checkbox" id="hour_more">
-              <label for="hour_more">More Info  <img src="img/features/more.svg" alt="more"></label>
-              <div>The killer is Sherlock Holmes!</div>            
+          <div class="features_wrapper">
+            <img src="img/features/24hour.svg" alt="24hour" class="features_img">
+            <h3 class="features_title">24/7 Technical Support</h3>
+            <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
+            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
           </div>
-        </div>
-        <div class="features_wrapper">
-          <img src="img/features/arrows_left_right.svg" alt="arrows" class="features_img">
-          <h3 class="features_title">return and excanges</h3>
-          <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-          <div class="features_more">
-              <input type="checkbox" id="excanges_more">
-              <label for="excanges_more">More Info  <img src="img/features/more.svg" alt="more"></label>
-              <div>The killer is Sherlock Holmes!</div>            
+          <div class="features_wrapper">
+            <img src="img/features/arrows_left_right.svg" alt="arrows" class="features_img">
+            <h3 class="features_title">return and excanges</h3>
+            <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
+            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
           </div>
-        </div>
-        <div class="features_wrapper">
-          <img src="img/features/promo_loyality.svg" alt="loyality" class="features_img">
-          <h3 class="features_title">Customer loyalty programs</h3>
-          <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-          <div class="features_more">
-              <input type="checkbox" id="loyality_more">
-              <label for="loyality_more">More Info  <img src="img/features/more.svg" alt="more"></label>
-              <div>The killer is Sherlock Holmes!</div>            
+          <div class="features_wrapper">
+            <img src="img/features/promo_loyality.svg" alt="loyality" class="features_img">
+            <h3 class="features_title">Customer loyalty programs</h3>
+            <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
+            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- End -->
+
 <!-- section deal 0f day -->
+
   <section class="products">
     <h2 class="hidden">products</h2>
     <div class="container">
@@ -113,6 +102,8 @@
         </div>
     </div>
 
+    <!-- End -->
+
     <!-- Products -->
 
     <div class="container">
@@ -122,15 +113,12 @@
             <img src="img/star.svg" alt="star">
             <h3 class="popular_title">popular products</h3>
             <p class="popular_descr">Proin hendrerit suscipit justo, ctus volutpat leo sollicitudin ac.</p>
-            <div class="popular_more">
-              <input type="checkbox" id="popular_more">
-              <label for="popular_more">More Products  <img src="img/more_white.svg" alt="more"></label>
-              <div>The killer is Sherlock Holmes!</div>
-            </div>
+            <a href="#" class="popular_more">popular_more <img src="img/more_white.svg" alt="more"></a>
           </div>        
         </div>        
       </div>
     </div>
+  </section>
 
 <!-- button LOAD MORE -->    
     <div class="container">
@@ -151,7 +139,43 @@
             <a href="#" class="reviews_hashtag">#AgoraStore</a>
           </div>
         </div>
-        <div class="grid-375_wrapper grid-long"></div>
+
+        <!-- revies_carousel started -->
+
+        <div class="grid-375_wrapper grid-long">
+          <div class="reviews_carousel">
+            <div>
+              <div class="reviews_carousel_wrapper">
+                <h3 class="reviews_carousel_title">latest tweets</h3>
+                <p class="reviews_carousel_descr">Sed pretium hendrerit fringilla. Vestibulum lorem justo,<br> tincidunt eu leo quis. <a href="#">#architecture</a> <a href="#">#bauhaus</a></p>
+                <p class="reviews_carousel_sign">@ThemeForest<br>
+                  <span>12 mins</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="reviews_carousel_wrapper">
+                <h3 class="reviews_carousel_title">latest tweets</h3>
+                <p class="reviews_carousel_descr">Sed pretium hendrerit fringilla. Vestibulum lorem justo,<br> tincidunt eu leo quis. <a href="#">#architecture</a> <a href="#">#bauhaus</a></p>
+                <p class="reviews_carousel_sign">@ThemeForest<br>
+                  <span>12 mins</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="reviews_carousel_wrapper">
+                <h3 class="reviews_carousel_title">latest tweets</h3>
+                <p class="reviews_carousel_descr">Sed pretium hendrerit fringilla. Vestibulum lorem justo,<br> tincidunt eu leo quis. <a href="#">#architecture</a> <a href="#">#bauhaus</a></p>
+                <p class="reviews_carousel_sign">@ThemeForest<br>
+                  <span>12 mins</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End -->
+
         <div class="grid-375_wrapper">
           <div class="reviews_wrapper">
             <img src="img/reviews/facebook.svg" alt="facebook">
@@ -172,6 +196,8 @@
         <div class="grid-375_wrapper"><div class="grid-empty"></div> </div>
         <div class="grid-375_wrapper"><div class="grid-empty"></div> </div>
       </div>
+
+      <!-- more some rewies in grid-250 Start -->
 
       <div class="grid-250">
         <div class="grid-250_wrapper">
@@ -200,6 +226,7 @@
   <!-- section awards -->
 
   <section class="awards">
+    <h2 class="hidden">awards</h2>
     <div class="container">
       <div class="grid-250">
         <div class="grid-250_wrapper">
@@ -242,8 +269,19 @@
     </div>
   </section>
 
+  //= template/subscribe.html
+
+  //= template/footer.html
+
+  <!-- Page UP button-->
+
+  <a href="#up" class="page-up"></a>
+
+
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
+
 </html>

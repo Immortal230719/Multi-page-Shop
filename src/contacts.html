@@ -6,18 +6,95 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/contacts.css">
   <title>Contacts</title>
+  //= template/sprite.html
 </head>
 <body>
-  <!-- header -->
-
-  <header>
+  <header id="up">
     //= template/header.html
   </header>
 
+<!-- title -->
+
+  <section class="contacts">
+    <div class="contacts_wrapper">
+      <h1 class="contacts_title">Contacts</h1>
+      <div class="contacts_subtitle">
+        <a href="#" class="contacts_links">Home <span>></span></a>
+        <a href="#" class="contacts_links">Profile <span>></span></a>
+        <a href="#" class="contacts_links">Compare</a>
+      </div>
+    </div>
+  </section>
+
+<!-- google map -->
+
+  <section class="map">
+    <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29741.377950256036!2d-3.696679815936134!3d40.42698894241281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228b8e2b7b727%3A0x2343f6316e2f37b7!2z0KHQsNC70LDQvNCw0L3QutCwLCDQnNCw0LTRgNC40LQsINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2sru!4v1575704636105!5m2!1sru!2sru" width="1500" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </section>
+
+  <!-- section Info Start -->
+
+  <section class="info">
+    <div class="container">
+      <div class="grid-375">
+        <div class="grid-375_wrapper grid-big">
+          <div class="info_wrapper">
+            <h2 class="info_title">Contact Info</h2>
+            <ul class="info_geo">
+              <li class="info_address">
+                <img src="img/contacts/address.svg" alt="address">
+                <address>
+                    <h3>address</h3>
+                    <a class="info_address_link" href="#">25, Lomonosova St. <br> Moscow, Russia, 665087</a>
+                </address>
+              </li>
+              <li class="info_phone">
+                <img src="img/contacts/phone.svg" alt="phone">       
+                <h3>phone</h3>          
+                <a class="info_phone_number" href="+72349495883">+7 234 949-58-83</a>
+                <a class="info_phone_number" href="+72349495883">+7 234 949-58-83</a>
+              </li>
+              <li class="info_email">
+                <img src="img/contacts/email.svg" alt="email">
+                <h3 class="info_email_title">E-mail</h3>
+                <a href="#" class="info_email_link">support@agorastore.com</a>
+              </li>
+              <li class="info_working">
+                <img src="img/contacts/clock.svg" alt="clock">
+                  <h3>working hours</h3>
+                  <p>Monday-Friday: 8am-8pm <br>
+                    Saturday 9am-1pm
+                  </p>
+              </li>          
+            </ul>
+          </div>
+        </div>
+        <div class="grid-375_wrapper grid-big">
+          <div class="info_wrapper">
+            <h2 class="info_title">Write to Us</h2>
+            <form action="" class="info_form-contact">
+              <input class="info_form-contact_name" type="text" name="name" placeholder="First Name">
+              <input class="info_form-contact_lastname" type="text" name="lastname" placeholder="Second Name">
+              <textarea class="info_form-contact_message" type="text" name="message" placeholder="message"></textarea>
+              <button type="submit" class="info_form-contact_btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section Subscribe Start -->
 
   //= template/subscribe.html
 
   //= template/footer.html
+
+  <a href="#up" class="page-up"></a>
+
+
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/main.js"></script>

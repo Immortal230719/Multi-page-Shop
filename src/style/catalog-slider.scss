@@ -7,21 +7,16 @@
 
 //variables
 
-$main-color: #606070;
+$main-color: rgb(223, 229, 231);
 $main-color2: #3a54d6;
-$text-color: #ffffff;
-$menu-link-color: #bdc7fc;
+$text-color: #111111;
+$menu-link-color: #2943c4da;
 
 @import "partials/header.scss";
-@import "partials/index/slider.scss";
-@import "partials/index/features.scss";
-@import "partials/product.scss";
-@import "partials/index/deal.scss";
-@import "partials/index/reviews.scss";
-@import "partials/index/awards.scss";
 @import "partials/subscribe.scss";
 @import "partials/footer.scss";
 @import "partials/pageup.scss";
+@import "partials/index/slider.scss";
 
 * {
   box-sizing: border-box;
@@ -118,7 +113,8 @@ $menu-link-color: #bdc7fc;
 }
 // partial files
 
-svg path {
-  fill: inherit;
-  stroke: inherit;
+.promo_collection {
+  span {
+    color: $main-color2;
+  }
 }

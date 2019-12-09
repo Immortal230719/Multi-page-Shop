@@ -42,6 +42,16 @@
     font-weight: 500;
     text-align: center;
     color: #3a54d6;
+    &_icon {
+      fill: $main-color2;
+      height: 13px;
+      width: 13px;
+      position: relative;
+      top: 2px;
+      left: 7px;
+      stroke: #fff;
+      stroke-width: 31px;
+    }
     label {
       cursor: pointer;
     }

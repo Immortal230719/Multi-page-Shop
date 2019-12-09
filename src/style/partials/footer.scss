@@ -88,6 +88,31 @@
       a {
         margin-left: 23px;
       }
+      &_google {
+        width: 19px;
+        height: 19px;
+        fill: #ffffff;
+      }
+      &_instagram {
+        width: 17px;
+        height: 17px;
+        fill: #ffffff;
+      }
+      &_vk {
+        width: 19px;
+        height: 19px;
+        fill: #ffffff;
+      }
+      &_facebook {
+        width: 17px;
+        height: 17px;
+        fill: #ffffff;
+      }
+      &_twitter {
+        width: 19px;
+        height: 19px;
+        fill: #ffffff;
+      }
     }
   }
   &_pay {
@@ -100,12 +125,24 @@
       color: #555555;
     }
     &_links {
-      line-height: 40px;
+      margin-top: -10px;
       display: flex;
       align-items: center;
       text-align: right;
       a {
         margin-left: 20px;
+      }
+      &_visa {
+        position: relative;
+        top: -2px;
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+      }
+      &_paypal {
+        width: 80px;
+        height: 80px;
+        fill: #fff;
       }
     }
   }

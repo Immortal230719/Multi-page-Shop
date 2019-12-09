@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">  
+  <title>Agora</title>
+  //= template/sprite.html
 </head>
 <body>
-
 <!-- header -->
 
-  <header id="up">
+  <header id="up">   
+    </object>
+    <h1 class="hidden">agora</h1>
     //= template/header.html
   </header>
 
@@ -34,25 +36,41 @@
             <img src="img/features/promo_basket.svg" alt="basket" class="features_img">
             <h3 class="features_title">Free Shipping</h3>
             <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
+            <a href="#" class="features_more">More Info              
+              <svg class="features_more_icon">
+                <use xlink:href="#arrow-right">
+              </svg>
+            </a>
           </div>
           <div class="features_wrapper">
             <img src="img/features/24hour.svg" alt="24hour" class="features_img">
             <h3 class="features_title">24/7 Technical Support</h3>
             <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
+            <a href="#" class="features_more">More Info  
+              <svg class="features_more_icon">
+                <use xlink:href="#arrow-right">
+              </svg>
+            </a>
           </div>
           <div class="features_wrapper">
             <img src="img/features/arrows_left_right.svg" alt="arrows" class="features_img">
             <h3 class="features_title">return and excanges</h3>
             <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
+            <a href="#" class="features_more">More Info  
+              <svg class="features_more_icon">
+                <use xlink:href="#arrow-right">
+              </svg>
+            </a>
           </div>
           <div class="features_wrapper">
             <img src="img/features/promo_loyality.svg" alt="loyality" class="features_img">
             <h3 class="features_title">Customer loyalty programs</h3>
             <p class="features_descr">Proin hendrerit suscipit justo, luctus volutpat leo sollicitudin ac.</p>
-            <a href="#" class="features_more">More Info  <img src="img/features/more.svg" alt="more"></a>
+            <a href="#" class="features_more">More Info  
+              <svg class="features_more_icon">
+                <use xlink:href="#arrow-right">
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -133,7 +151,11 @@
       <div class="grid-375">
         <div class="grid-375_wrapper">
           <div class="reviews_wrapper">
-            <img src="img/reviews/twitter.svg" alt="twitter">
+            <div>
+              <svg class="reviews_twitter-icon">
+                <use xlink:href="#twitter_icon">
+              </svg>
+            </div>
             <h3 class="reviews_title">Twitter</h3>
             <p class="reviews_number">8851</p>
             <a href="#" class="reviews_hashtag">#AgoraStore</a>
@@ -178,7 +200,11 @@
 
         <div class="grid-375_wrapper">
           <div class="reviews_wrapper">
-            <img src="img/reviews/facebook.svg" alt="facebook">
+            <div>
+              <svg class="reviews_facebook-icon">
+                <use xlink:href="#facebook_icon">
+              </svg>
+            </div>
             <h3 class="reviews_title">Facebook</h3>
             <p class="reviews_number">12089</p>
             <a href="#" class="reviews_hashtag">#AgoraStore</a>
@@ -187,7 +213,11 @@
         <div class="grid-375_wrapper"><div class="grid-empty"></div> </div>
         <div class="grid-375_wrapper">
           <div class="reviews_wrapper">
-            <img src="img/reviews/insta.svg" alt="instagramm">
+            <div>
+              <svg class="reviews_instagram-icon">
+                <use xlink:href="#instagram_icon">
+              </svg>
+            </div>
             <h3 class="reviews_title">Instagram</h3>
             <p class="reviews_number">2305</p>
             <a href="#" class="reviews_hashtag">#AgoraStore</a>
@@ -275,7 +305,11 @@
 
   <!-- Page UP button-->
 
-  <a href="#up" class="page-up"></a>
+  <a href="#up" class="page-up">
+    <svg class="page-up_icon">
+      <use xlink:href="#arrow-up_icon"></use>
+    </svg>
+  </a>
 
 
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

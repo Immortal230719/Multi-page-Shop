@@ -1,5 +1,20 @@
 .reviews {
   position: relative;
+  &_twitter-icon {
+    width: 100%;
+    fill: #fff;
+    height: 23px;
+  }
+  &_facebook-icon {
+    width: 100%;
+    fill: #fff;
+    height: 23px;
+  }
+  &_instagram-icon {
+    width: 100%;
+    fill: $main-color2;
+    height: 23px;
+  }
   &_wrapper {
     display: flex;
     flex-direction: column;

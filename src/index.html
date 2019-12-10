@@ -131,7 +131,11 @@
             <img src="img/star.svg" alt="star">
             <h3 class="popular_title">popular products</h3>
             <p class="popular_descr">Proin hendrerit suscipit justo, ctus volutpat leo sollicitudin ac.</p>
-            <a href="#" class="popular_more">popular_more <img src="img/more_white.svg" alt="more"></a>
+            <a href="#" class="popular_more">popular_more 
+              <svg class="popular_more_icon">
+                <use xlink:href="#arrow-right">
+              </svg>
+            </a>
           </div>        
         </div>        
       </div>
@@ -140,7 +144,14 @@
 
 <!-- button LOAD MORE -->    
     <div class="container">
-      <button class="load_more" type="button"><img src="img/load_more.svg" alt="load_more">Load more</button>
+      <button class="load_more" type="button">
+        <div>
+          <svg class="load_more_icon">
+            <use xlink:href="#load_icon"></use>
+          </svg>
+        </div>
+        Load more
+      </button>
     </div>
 
 <!-- twits & facebook reviews -->

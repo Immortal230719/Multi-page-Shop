@@ -23,7 +23,18 @@
     color: #888888;
   }
   &_form {
+    margin: 0 auto;
+    width: 500px;
+    position: relative;
     margin-top: 55px;
+    &_icon {
+      top: 18px;
+      position: absolute;
+      right: 30px;
+      width: 25px;
+      height: 25px;
+      fill: $main-color2;
+    }
   }
   &_email {
     display: block;
@@ -35,6 +46,6 @@
     box-shadow: 0px 5px 40px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     padding-left: 32px;
-    background: url("../img/subscribe.svg") center right 29px no-repeat #ffffff;
+    background: url("#email_icon") center right 29px no-repeat #ffffff;
   }
 }

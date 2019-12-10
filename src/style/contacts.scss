@@ -3,7 +3,6 @@
 @import "partials/fonts.scss";
 @import "lib/reset.scss";
 @import "lib/slick.scss";
-@import "lib/slick-theme.scss";
 
 //variables
 
@@ -179,9 +178,6 @@ $menu-link-color: #bdc7fc;
       }
       &:nth-child(4) {
         padding-top: 30px;
-        h3 {
-          margin-top: 21px;
-        }
       }
       a {
         font-family: "Poppins";
@@ -209,9 +205,6 @@ $menu-link-color: #bdc7fc;
         letter-spacing: 1.2px;
         color: #222222;
       }
-      img {
-        align-self: center;
-      }
     }
   }
   &_title {
@@ -225,6 +218,26 @@ $menu-link-color: #bdc7fc;
       display: block;
       width: 142px;
     }
+  }
+  &_phone_icon {
+    width: 32px;
+    height: 32px;
+    fill: $main-color2;
+  }
+  &_clock_icon {
+    width: 32px;
+    height: 32px;
+    fill: $main-color2;
+  }
+  &_placeholder_icon {
+    width: 32px;
+    height: 32px;
+    fill: $main-color2;
+  }
+  &_email_icon {
+    width: 32px;
+    height: 32px;
+    fill: $main-color2;
   }
   &_form-contact {
     margin-top: 30px;

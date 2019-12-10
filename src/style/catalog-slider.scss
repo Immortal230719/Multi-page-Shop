@@ -3,7 +3,6 @@
 @import "partials/fonts.scss";
 @import "lib/reset.scss";
 @import "lib/slick.scss";
-@import "lib/slick-theme.scss";
 
 //variables
 
@@ -117,4 +116,9 @@ $menu-link-color: #2943c4da;
   span {
     color: $main-color2;
   }
+}
+
+.promo_slider_prev,
+.promo_slider_next {
+  border: 2px solid rgba(0, 0, 0, 0.363);
 }

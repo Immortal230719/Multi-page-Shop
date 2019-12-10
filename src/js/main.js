@@ -12,6 +12,16 @@ $(document).ready(function() {
     speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: `<button type="button" class="promo_slider_next"><div>
+    <svg class="promo_slider_next_icon">
+      <use xlink:href="#arrow_right_slider"></use>
+    </svg>
+  </div></button>`,
+    prevArrow: `<button type="button" class="promo_slider_prev"><div>
+    <svg class="promo_slider_prev_icon">
+      <use xlink:href="#arrow_left_slider"></use>
+    </svg>
+  </div></button>`,
     responsive: [
       {
         breakpoint: 600,

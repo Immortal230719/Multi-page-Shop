@@ -125,6 +125,7 @@
       color: #555555;
     }
     &_links {
+      position: relative;
       margin-top: -10px;
       display: flex;
       align-items: center;
@@ -133,13 +134,17 @@
         margin-left: 20px;
       }
       &_visa {
-        position: relative;
-        top: -2px;
+        position: absolute;
+        bottom: -59px;
+        right: 0px;
         width: 50px;
         height: 50px;
         fill: #fff;
       }
       &_paypal {
+        position: absolute;
+        bottom: -76px;
+        right: 90px;
         width: 80px;
         height: 80px;
         fill: #fff;

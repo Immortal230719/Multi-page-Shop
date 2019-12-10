@@ -123,10 +123,15 @@
     font-weight: 500;
     text-align: center;
     color: $text-color;
-    img {
+    &_icon {
+      fill: #fff;
+      height: 13px;
+      width: 13px;
       position: relative;
       top: 2px;
       left: 7px;
+      stroke: #111;
+      stroke-width: 31px;
     }
   }
 }
@@ -150,7 +155,10 @@
   text-align: center;
   color: #111111;
   text-transform: uppercase;
-  img {
+  &_icon {
+    width: 25px;
+    height: 25px;
+    fill: $main-color2;
     margin-right: 15px;
   }
 }

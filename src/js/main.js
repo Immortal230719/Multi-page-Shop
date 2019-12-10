@@ -1,10 +1,49 @@
 "Use Strict";
-
 //= lib/slick.min.js
-//= lib/products.js
 //= lib/wow.min.js
 
+//= partials/header.js
+
 $(document).ready(function() {
+  //tabs init
+
+  $("#tab-list").on("click", function(event) {
+    alert(event.target.nodeName);
+  });
+
+  $("#men").on("click", function() {
+    $(this)
+      .addClass("catalog-tabs_btn_active")
+      .siblings()
+      .removeClass("catalog-tabs_btn_active");
+    $("#tab-men")
+      .addClass("hidden_grid")
+      .siblings()
+      .removeClass("hidden_grid");
+  });
+
+  $("#women").on("click", function() {
+    $(this)
+      .addClass("catalog-tabs_btn_active")
+      .siblings()
+      .removeClass("catalog-tabs_btn_active");
+    $("#tab-women")
+      .addClass("hidden_grid")
+      .siblings()
+      .removeClass("hidden_grid");
+  });
+
+  $("#kids").on("click", function() {
+    $(this)
+      .addClass("catalog-tabs_btn_active")
+      .siblings()
+      .removeClass("catalog-tabs_btn_active");
+    $("#tab-kids")
+      .addClass("hidden_grid")
+      .siblings()
+      .removeClass("hidden_grid");
+  });
+
   // promo-slider
   $(".promo_slider").slick({
     dots: true,
@@ -72,6 +111,3 @@ $(document).ready(function() {
 
   new WOW().init();
 });
-
-//= partials/header.js
-//= partials/render.js

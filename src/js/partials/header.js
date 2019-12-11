@@ -1,103 +1,104 @@
-//elements UI
+$(document).ready(function() {
+  //elements UI
 
-// buttons
-const navLoginBtn = document.querySelector(".header_login");
-const navSearchBtn = document.querySelector(".header_search");
-const searchClose = document.querySelector(".search_close");
-const basketCartBtn = document.querySelector(".header_basket");
-const navSelectBtn = document.querySelector(".header_select");
+  // buttons
+  const navLoginBtn = $("#headerLogin");
+  const navSearchBtn = $("#headerSearchBtn");
+  const searchClose = $("#searchCloseBtn");
+  const basketCartBtn = $("#headerBasket");
+  const navSelectBtn = $("#headerSelect");
 
-//hidden forms
-const signForm = document.querySelector(".sign");
-const searchForm = document.querySelector(".search");
-const basketCart = document.querySelector(".basket-cart");
-const menu = document.querySelector(".menu");
-const animateSpan = document.querySelector(".menu_animate_span");
+  //hidden forms
+  const signForm = $("#signForm");
+  const searchForm = $("#searching");
+  const basketCart = $("#basketCart");
+  const menu = $("#fullMenu");
+  const animateSpan = $("#menuAnimateSpan");
 
-// interactive changing elements
+  // interactive changing elements
 
-const basketQuanity = document.querySelector(".basket-cart_title > span");
-const cartCase = document.querySelector(".basket-cart_wrapper");
-const basketCounter = document.querySelector(".header_basket_counter");
+  const basketQuanity = $("#basketCartCounter");
+  const cartCase = $("#cartCase");
+  const basketCounter = $("#headerBasketCounter");
 
-// events
+  // events
 
-//show Login Form
-navLoginBtn.addEventListener("click", () => {
-  //delete open elements
-  basketCart.parentElement.classList.remove("hidden_active");
-  basketCart.parentElement.classList.remove("hidden_active");
-  // open needed element
-  signForm.parentElement.classList.toggle("hidden_active");
-});
+  //show Login Form
+  navLoginBtn.on("click", function() {
+    //delete open elements
+    basketCart.parent().addClass("hidden_active");
+    basketCart.parent().removeClass("hidden_active");
+    // open needed element
+    signForm.parent().toggleClass("hidden_active");
+  });
 
-//show Search Form
-navSearchBtn.addEventListener("click", () => {
-  basketCart.parentElement.classList.remove("hidden_active");
-  signForm.parentElement.classList.remove("hidden_active");
-  searchForm.parentElement.classList.toggle("over-flow_animate");
-});
+  //show Search Form
+  navSearchBtn.on("click", function() {
+    basketCart.parent().removeClass("hidden_active");
+    signForm.parent().removeClass("hidden_active");
+    searchForm.parent().toggleClass("over-flow_animate");
+  });
 
-//close Search Form
-searchClose.addEventListener("click", () => {
-  searchForm.parentElement.classList.toggle("over-flow_animate");
-});
+  //close Search Form
+  searchClose.on("click", function() {
+    searchForm.parent().toggleClass("over-flow_animate");
+  });
 
-// show hidden Basket
-basketCartBtn.addEventListener("click", () => {
-  signForm.parentElement.classList.remove("hidden_active");
-  basketCart.parentElement.classList.toggle("hidden_active");
-});
+  // show hidden Basket
+  basketCartBtn.on("click", function() {
+    signForm.parent().removeClass("hidden_active");
+    basketCart.parent().toggleClass("hidden_active");
+  });
 
-//remove Element in basket
-cartCase.addEventListener("click", e => {
-  let numOfItems = cartCase.children.length;
-  if (e.target.className === "basket-cart_close") {
-    e.target.parentElement.remove();
-    numOfItems--;
-    basketQuanity.textContent = numOfItems;
-    basketCounter.textContent = numOfItems;
+  //remove Element in basket
+  cartCase.on("click", function(e) {
+    let numOfItems = cartCase.children().length;
+    if (e.target.className === "basket-cart_close") {
+      e.target.parentElement.remove();
+      numOfItems--;
+      basketQuanity.text(numOfItems);
+      basketCounter.text(numOfItems);
+    }
+    if (numOfItems === 0) {
+      basketCounter.addClass("hidden");
+      basketCart.parent().toggleClass("hidden_active");
+    }
+  });
+
+  //show Menu
+  navSelectBtn.on("click", function() {
+    if (animateSpan[0].className === "menu_animate_span") {
+      requestAnimationFrame(animateMenu);
+    } else {
+      requestAnimationFrame(disapearMenu);
+    }
+  });
+
+  navSelectBtn.on("keypress", function(e) {
+    if (animateSpan[0].className === "menu_animate_span" && e.key === "Enter") {
+      requestAnimationFrame(animateMenu);
+    } else {
+      requestAnimationFrame(disapearMenu);
+    }
+  });
+
+  // functions
+
+  function animateMenu() {
+    basketCart.parent().removeClass("hidden_active");
+    signForm.parent().removeClass("hidden_active");
+    navSelectBtn.addClass("active");
+    animateSpan.addClass("menu_animate_span_disapear");
+    setTimeout(() => menu.addClass("menu_animate"), 600);
+    setTimeout(() => menu.children().addClass("hidden_grid"), 1500);
   }
-  if (numOfItems === 0) {
-    basketCounter.classList.add("hidden");
-  }
-  return;
-});
 
-//show Menu
-navSelectBtn.addEventListener("click", () => {
-  if (animateSpan.className === "menu_animate_span") {
-    requestAnimationFrame(animateMenu);
-  } else {
-    requestAnimationFrame(disapearMenu);
+  function disapearMenu() {
+    navSelectBtn.removeClass("active");
+    menu.children().removeClass("hidden_grid");
+    menu.removeClass("menu_animate");
+    setTimeout(function() {
+      animateSpan.removeClass("menu_animate_span_disapear");
+    }, 1200);
   }
 });
-
-navSelectBtn.addEventListener("keypress", e => {
-  if (animateSpan.className === "menu_animate_span" && e.code === "Space") {
-    requestAnimationFrame(animateMenu);
-  } else {
-    requestAnimationFrame(disapearMenu);
-  }
-});
-
-// functions
-
-function animateMenu() {
-  basketCart.parentElement.classList.remove("hidden_active");
-  signForm.parentElement.classList.remove("hidden_active");
-  navSelectBtn.classList.add("active");
-  animateSpan.classList.add("menu_animate_span_disapear");
-  setTimeout(() => menu.classList.add("menu_animate"), 600);
-  setTimeout(() => menu.firstElementChild.classList.add("hidden_grid"), 1500);
-}
-
-function disapearMenu() {
-  navSelectBtn.classList.remove("active");
-  menu.firstElementChild.classList.remove("hidden_grid");
-  menu.classList.remove("menu_animate");
-  setTimeout(
-    () => animateSpan.classList.remove("menu_animate_span_disapear"),
-    1200
-  );
-}

@@ -1,12 +1,13 @@
 <!-- header Nav Start -->
 <nav class="header">   
   <ul class="header_nav">
-    <li><button class="header_search unselectable">
+    <li>
+      <button id="headerSearchBtn" class="header_search unselectable">
       <svg class="header_search_icon">
         <use xlink:href="#searching_icon"></use>
       </svg>
     </button></li>
-    <li tabindex="0" class="header_select unselectable">
+    <li id="headerSelect" tabindex="0" class="header_select unselectable">
       <div class="header_hamburger">
         <span></span>
         <span></span>
@@ -21,25 +22,25 @@
       <a href="index.html" tabindex="0" class="header_item unselectable">agora</a>
     </li>
     <li>
-      <button class="header_login unselectable">
+      <button id="headerLogin" class="header_login unselectable">
         <svg class="header_login_icon">
           <use xlink:href="#login_icon"></use>
         </svg>
       </button>
     </li>
     <li>
-      <button class="header_like unselectable">
+      <button id="headerLike" class="header_like unselectable">
           <svg class="header_like_icon" viewBox="0 0 471.701 471.701">
             <use xlink:href="#heart_icon"></use>
           </svg>
       </button>
     </li>
     <li>
-      <button  class="header_basket unselectable">
+      <button id="headerBasket"  class="header_basket unselectable">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="header_basket_icon">
           <use xlink:href="#basket_icon"></use>
         </svg>
-        <span class="header_basket_counter">3</span>
+        <span id="headerBasketCounter" class="header_basket_counter">3</span>
       </button>
     </li>
   </ul>
@@ -47,7 +48,7 @@
 
   <!-- Sign Form Start-->
   <div class="hidden">
-    <div class="sign">
+    <div id="signForm" class="sign">
       <div class="sign_title">
         Sign in
       </div>
@@ -65,9 +66,9 @@
 
 <!-- Search Form Start -->
   <div class="over-flow">
-    <div class="search">
+    <div id="searching" class="search">
       <form action="#" class="search_form">
-        <span tabindex="0" class="search_close">&times;</span>
+        <span id="searchCloseBtn" tabindex="0" class="search_close">&times;</span>
         <input tabindex="0" type="text" class="search_input" placeholder="Type to search">
         <button tabindex="0" class="search_btn">
           <svg class="header_search_icon">
@@ -81,11 +82,11 @@
 
 <!-- basket-cart Start -->
   <div class="hidden">
-    <div class="basket-cart">
+    <div id="basketCart" class="basket-cart">
       <div class="basket-cart_title">
-        Your Cart: <span>3</span>
+        Your Cart: <span id="basketCartCounter">3</span>
       </div>
-      <div class="basket-cart_wrapper">
+      <div id="cartCase" class="basket-cart_wrapper">
         <div class="basket-cart_item">
           <img src="img/header/basket-cart.png" alt="item" class="basket-cart_img">
           <p class="basket-cart_price">
@@ -115,7 +116,7 @@
   <!-- basket-cart End -->
 
   <!-- fullMenu Start -->
-  <div class="menu">
+  <div id="fullMenu" class="menu">
     <div class="hidden">
       <div class="menu_grid">
         <div class="menu_column">
@@ -216,6 +217,6 @@
       </div>
     </div>
   </div>
-  <span class="menu_animate_span"></span>
+  <span id="menuAnimateSpan" class="menu_animate_span"></span>
   <!-- fullMenu End -->
 </nav>

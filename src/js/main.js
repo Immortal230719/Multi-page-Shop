@@ -7,41 +7,34 @@
 $(document).ready(function() {
   //tabs init
 
-  $("#tab-list").on("click", function(event) {
-    alert(event.target.nodeName);
-  });
-
-  $("#men").on("click", function() {
-    $(this)
+  $("#tabList").click(function(event) {
+    console.log(event.target.id);
+    $(event.target)
       .addClass("catalog-tabs_btn_active")
       .siblings()
       .removeClass("catalog-tabs_btn_active");
-    $("#tab-men")
-      .addClass("hidden_grid")
-      .siblings()
-      .removeClass("hidden_grid");
-  });
-
-  $("#women").on("click", function() {
-    $(this)
-      .addClass("catalog-tabs_btn_active")
-      .siblings()
-      .removeClass("catalog-tabs_btn_active");
-    $("#tab-women")
-      .addClass("hidden_grid")
-      .siblings()
-      .removeClass("hidden_grid");
-  });
-
-  $("#kids").on("click", function() {
-    $(this)
-      .addClass("catalog-tabs_btn_active")
-      .siblings()
-      .removeClass("catalog-tabs_btn_active");
-    $("#tab-kids")
-      .addClass("hidden_grid")
-      .siblings()
-      .removeClass("hidden_grid");
+    switch (event.target.id) {
+      case "men":
+        $("#tabMen")
+          .addClass("hidden_grid")
+          .siblings()
+          .removeClass("hidden_grid");
+        break;
+      case "women":
+        $("#tabWomen")
+          .addClass("hidden_grid")
+          .siblings()
+          .removeClass("hidden_grid");
+        break;
+      case "kids":
+        $("#tabKids")
+          .addClass("hidden_grid")
+          .siblings()
+          .removeClass("hidden_grid");
+        break;
+      default:
+        alert("somthing wrong");
+    }
   });
 
   // promo-slider
@@ -103,7 +96,7 @@ $(document).ready(function() {
     }
   });
 
-  $("a[href^=#up]").click(function() {
+  $("a[href='#up']").click(function() {
     const _href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
     return false;

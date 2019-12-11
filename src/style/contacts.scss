@@ -132,10 +132,14 @@ $menu-link-color: #bdc7fc;
     a {
       font-family: "Poppins";
       font-size: 12px;
-      line-height: 3;
       color: #7e8fe7;
       span {
-        margin: 0 4px 0 4px;
+        position: relative;
+        top: 2px;
+        margin: 0 8px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
       }
     }
   }

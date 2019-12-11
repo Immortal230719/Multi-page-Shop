@@ -52,8 +52,9 @@ function createProduct(objOfProduct) {
   img.classList.add("product_img");
   img.setAttribute("src", `${objOfProduct.image}`);
 
-  const title = document.createElement("p");
+  const title = document.createElement("a");
   title.classList.add("product_title");
+  title.setAttribute("href", "product.html");
   title.textContent = `${objOfProduct.name}`;
 
   const price = document.createElement("p");

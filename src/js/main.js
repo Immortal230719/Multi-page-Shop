@@ -1,11 +1,12 @@
-"Use Strict";
+//= lib/jquery-3.4.1.min.js
+//= lib/jquery-migrate-1.2.1.min.js
 //= lib/slick.min.js
 //= lib/wow.min.js
-
-//= partials/header.js
+//= lib/products.js
 
 $(document).ready(function() {
   //tabs init
+  //= partials/header.js
 
   $("#tabList").click(function(event) {
     console.log(event.target.id);
@@ -38,6 +39,7 @@ $(document).ready(function() {
   });
 
   // promo-slider
+
   $(".promo_slider").slick({
     dots: true,
     infinite: true,
@@ -45,15 +47,15 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: `<button type="button" class="promo_slider_next"><div>
-    <svg class="promo_slider_next_icon">
-      <use xlink:href="#arrow_right_slider"></use>
-    </svg>
-  </div></button>`,
+      <svg class="promo_slider_next_icon">
+        <use xlink:href="#arrow_right_slider"></use>
+      </svg>
+      </div></button>`,
     prevArrow: `<button type="button" class="promo_slider_prev"><div>
-    <svg class="promo_slider_prev_icon">
-      <use xlink:href="#arrow_left_slider"></use>
-    </svg>
-  </div></button>`,
+      <svg class="promo_slider_prev_icon">
+        <use xlink:href="#arrow_left_slider"></use>
+      </svg>
+      </div></button>`,
     responsive: [
       {
         breakpoint: 600,
@@ -89,7 +91,7 @@ $(document).ready(function() {
 
   // Page UP
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 1000) {
+    if ($(this).scrollTop() > 700) {
       $(".page-up").fadeIn();
     } else {
       $(".page-up").fadeOut();
@@ -104,3 +106,5 @@ $(document).ready(function() {
 
   new WOW().init();
 });
+
+//= partials/render.js

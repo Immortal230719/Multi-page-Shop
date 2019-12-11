@@ -1,0 +1,399 @@
+//some libs
+
+@import "partials/fonts.scss";
+@import "lib/reset.scss";
+@import "lib/slick.scss";
+
+//variables
+
+$main-color: #3a54d6;
+$main-color2: #3a54d6;
+$text-color: #ffffff;
+$menu-link-color: #bdc7fc;
+
+@import "partials/header.scss";
+@import "partials/subscribe.scss";
+@import "partials/footer.scss";
+@import "partials/pageup.scss";
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline-color: $main-color2;
+  }
+}
+
+// my classes
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.hidden {
+  display: none;
+  &_active {
+    display: block;
+  }
+  &_grid {
+    display: grid;
+  }
+  &_flex {
+    display: flex;
+  }
+}
+
+.over-flow {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  &_animate {
+    left: 0;
+  }
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+// grids
+
+.grid-375 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-auto-rows: 625px;
+  grid-auto-flow: dense;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  &_wrapper {
+    z-index: 5;
+    position: relative;
+    box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  }
+}
+
+.grid-big {
+  padding: 165px 125px 0 125px;
+  grid-column-end: span 2;
+  background-color: #fff;
+}
+
+.grid-long {
+  grid-column-end: span 2;
+}
+
+.grid-tall {
+  grid-row-end: span 2;
+}
+
+.grid-empty {
+  height: 100%;
+  background-color: rgb(121, 121, 121);
+  box-shadow: inset -1px -1px 0 0 #e6e6e6;
+}
+
+.product {
+  margin-top: 75px;
+  height: 235px;
+  width: 100%;
+  padding: 55px 0 125px 0;
+  background-color: $main-color2;
+  &_title {
+    font-family: "Oswald";
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: #ffffff;
+  }
+  &_subtitle {
+    margin: 0 auto;
+    margin-top: 3px;
+    text-align: center;
+    a {
+      font-family: "Poppins";
+      font-size: 12px;
+      color: #7e8fe7;
+      span {
+        position: relative;
+        top: 2px;
+        margin: 0 8px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.item {
+  margin-top: -75px;
+  &_category {
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    color: $main-color2;
+  }
+  &_name {
+    margin-top: 15px;
+    font-family: "Oswald";
+    font-size: 30px;
+    line-height: 30px;
+    color: #111111;
+  }
+  &_rating {
+    margin-top: 28px;
+    display: flex;
+    &_stars {
+      margin-right: 38px;
+      display: flex;
+      &_icon {
+        margin-right: 2px;
+        margin-left: 2px;
+        width: 13px;
+        height: 13px;
+        fill: #feb312;
+      }
+    }
+    &_count-reviews {
+      font-family: "Poppins";
+      font-size: 12px;
+      color: #bbbbbb;
+    }
+  }
+  &_form {
+    display: flex;
+    margin-top: 31px;
+    flex-wrap: wrap;
+    &_flex {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+    }
+    &_wrapper {
+      &:nth-child(1) {
+        margin-right: 67px;
+      }
+    }
+    &_title {
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: #111111;
+    }
+    &_price {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins";
+      font-size: 20px;
+      font-weight: 600;
+      color: #111111;
+      span {
+        margin-left: 7px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #b1b1b1;
+        text-decoration: line-through;
+      }
+    }
+    &_counter {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 50px;
+      border-radius: 30px;
+      border: solid 1px #dddddd;
+      background-color: #ffffff;
+      span {
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.79;
+        color: #111111;
+      }
+      &_minus {
+        padding: 0;
+        font-family: "Poppins";
+        font-size: 14px;
+        margin: 0 20px;
+        background-color: inherit;
+        width: 20px;
+        height: 20px;
+        color: #b1b1b1;
+        cursor: pointer;
+      }
+      &_plus {
+        padding: 0;
+        font-family: "Poppins";
+        font-size: 14px;
+        margin: 0 20px;
+        background-color: inherit;
+        width: 20px;
+        height: 20px;
+        color: #b1b1b1;
+        cursor: pointer;
+      }
+    }
+    &_discount {
+      margin-left: 35px;
+      margin-right: 40px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 20px;
+      border-radius: 3px;
+      background-color: #111111;
+      font-family: "Poppins";
+      font-size: 11px;
+      font-weight: 400;
+      text-align: center;
+      color: #ffffff;
+    }
+    &_btn {
+      width: 130px;
+      height: 50px;
+      box-shadow: 0px 5px 20px 0 rgba(58, 84, 214, 0.4);
+      background-color: $main-color2;
+      font-family: "Poppins";
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-color;
+      border-radius: 30px;
+      line-height: 25px;
+      &_icon {
+        position: relative;
+        top: 5px;
+        right: 7px;
+        width: 17px;
+        height: 18px;
+        fill: #ffffff;
+      }
+    }
+    &_colors {
+      display: flex;
+      width: 185px;
+      justify-content: space-between;
+      margin-top: 20px;
+      &_blue + label:before {
+        background-color: #3a54d6;
+      }
+      &_aqua + label:before {
+        background-color: #23a5e8;
+      }
+      &_green + label:before {
+        background-color: #5bb22c;
+      }
+      &_orange + label:before {
+        background-color: #feb312;
+        margin-right: 67px;
+      }
+    }
+    &_size {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 195px;
+      &_9 + label:before {
+        content: "9";
+      }
+      &_9-5 + label:before {
+        content: "9.5";
+      }
+      &_10 + label:before {
+        content: "10";
+      }
+      &_10-5 + label:before {
+        content: "10.5";
+      }
+      &_11 + label:before {
+        content: "11";
+      }
+    }
+  }
+  &_hr {
+    margin: 30px 0 0 0;
+    width: 500px;
+    height: 1px;
+    border: none;
+    background-color: #ebebeb;
+  }
+  &_compare {
+    margin-right: 40px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;
+    &_icon {
+      position: relative;
+      top: 4px;
+      margin-right: 12px;
+      width: 16px;
+      height: 18px;
+      fill: #bbbbbb;
+    }
+  }
+  &_wish-list {
+    font-family: "Poppins";
+    font-size: 12px;
+    color: #888888;
+    &_icon {
+      position: relative;
+      top: 4px;
+      margin-right: 8px;
+      width: 17px;
+      height: 16px;
+      fill: #bbbbbb;
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input.input_size + label:before {
+  font-family: "Poppins";
+  color: #888888;
+  font-size: 15px;
+  font-weight: 700;
+  margin: -5px 5px 0 0;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+input.input_color + label:before {
+  content: "\2713";
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin: -5px 5px 0 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+input.input_color:checked + label:before {
+  color: #ffffff;
+}
+input.input_size:checked + label:before {
+  color: #3a54d6;
+}

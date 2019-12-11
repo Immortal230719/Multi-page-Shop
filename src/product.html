@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/item.css">
+  <title>product</title>
+</head>
+<body>
+    //= template/sprite.html
+    <header id="up">
+      //= template/header.html
+    </header>
+  
+  <!-- title -->
+  
+    <section class="product">
+      <div class="product_wrapper">
+        <h1 class="product_title">MEN'S LIFESTYLE SHOES</h1>
+        <div class="product_subtitle">
+          <a href="index.html" class="product_links">Home <span>></span></a>
+          <a href="catalog-slider.html" class="product_links">Catalog <span>></span></a>
+          <a href="#" class="product_links">Men <span>></span></a>
+          <a href="#" class="product_links">Shoes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- product section Start -->
+
+    <section class="item">
+      <div class="container">
+        <div class="grid-375">
+          <div class="grid-375_wrapper grid-big">
+            <h3 class="item_category">lifestyle</h3>
+            <h2 class="item_name">LeBron XIII Premium AS iD</h2>
+            <div class="item_rating">
+              <div class="item_rating_stars">
+                <svg class="item_rating_stars_icon">
+                  <use xlink:href="#rating-full_star"></use>
+                </svg>
+                <svg class="item_rating_stars_icon">
+                  <use xlink:href="#rating-full_star"></use>
+                </svg>
+                <svg class="item_rating_stars_icon">
+                  <use xlink:href="#rating-full_star"></use>
+                </svg>
+                <svg class="item_rating_stars_icon">
+                  <use xlink:href="#rating-full_star"></use>
+                </svg>
+                <svg class="item_rating_stars_icon">
+                  <use xlink:href="#rating-half_star"></use>
+                </svg>
+              </div>
+              <p class="item_rating_count-reviews"><span>23</span> Reviews</p>
+            </div>
+            <form id="productId" action="#" class="item_form">
+              <div class="item_form_wrapper">
+                <p class="item_form_title">colors:</p>
+                <div class="item_form_colors">                
+                  <input id="blue" class="input_color item_form_colors_blue" name="color" type="radio">
+                  <label for="blue" ></label>
+                  <input id="aqua" class="input_color item_form_colors_aqua" name="color" type="radio">
+                  <label for="aqua" ></label>
+                  <input id="green" class="input_color item_form_colors_green" name="color" type="radio">
+                  <label for="green" ></label>
+                  <input id="orange" class="input_color item_form_colors_orange" name="color" type="radio">
+                  <label for="orange" ></label>
+                </div>
+              </div>
+              <div class="item_form_wrapper">
+                  <p class="item_form_title">size:</p>
+                  <div class="item_form_size">                
+                    <input id="9" class="input_size item_form_size_9" name="size" type="radio">
+                    <label for="9" ></label>
+                    <input id="9.5" class="input_size item_form_size_9-5" name="size" type="radio">
+                    <label for="9.5" ></label>
+                    <input id="10" class="input_size item_form_size_10" name="size" type="radio">
+                    <label for="10" ></label>
+                    <input id="10.5" class="input_size item_form_size_10-5" name="size" type="radio">
+                    <label for="10.5" ></label>
+                    <input id="11" class="input_size item_form_size_11" name="size" type="radio">
+                    <label for="11" ></label>
+                  </div>
+                </div>
+              <div class="item_form_flex">
+                <p class="item_form_price">$250.00 <span>350.00</span></p>
+                <span class="item_form_discount">-30%</span>
+                <div class="item_form_counter">
+                  <button class="item_form_counter_minus">-</button>
+                  <span id="itemFormCounterNumber">2</span>
+                  <button class="item_form_counter_plus">+</button>
+                </div>
+                <button class="item_form_btn">
+                  <svg class="item_form_btn_icon">
+                    <use xlink:href="#basket_icon_plus-item"></use>
+                  </svg>
+                  Buy
+                </button>
+              </div>              
+            </form>
+            <hr class="item_hr">
+            <div class="item_form_flex">
+              <div class="item_compare">
+                <a href="#">
+                  <svg class="item_compare_icon">
+                    <use xlink:href="#compare_icon"></use>
+                  </svg>
+                  Compare
+                </a>
+              </div>
+              <div class="item_wish-list">
+                <a href="#">
+                  <svg class="item_wish-list_icon">
+                    <use xlink:href="#heart_icon"></use>
+                  </svg>
+                  Add to Wish List
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid-375_wrapper grid-big"></div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
+    //= template/subscribe.html
+
+    //= template/footer.html
+  
+    <!-- Page UP button-->
+  
+    <a href="#up" class="page-up">
+      <svg class="page-up_icon">
+        <use xlink:href="#arrow-up_icon"></use>
+      </svg>
+    </a>
+    
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -25,16 +25,15 @@ const basketCounter = $("#headerBasketCounter");
 //show Login Form
 navLoginBtn.on("click", function() {
   //delete open elements
-  basketCart.parent().addClass("hidden_active");
-  basketCart.parent().removeClass("hidden_active");
+  basketCart.parent().fadeOut();
   // open needed element
-  signForm.parent().toggleClass("hidden_active");
+  signForm.parent().fadeToggle();
 });
 
 //show Search Form
 navSearchBtn.on("click", function() {
-  basketCart.parent().removeClass("hidden_active");
-  signForm.parent().removeClass("hidden_active");
+  basketCart.parent().fadeOut();
+  signForm.parent().fadeOut();
   searchForm.parent().toggleClass("over-flow_animate");
 });
 
@@ -45,8 +44,8 @@ searchClose.on("click", function() {
 
 // show hidden Basket
 basketCartBtn.on("click", function() {
-  signForm.parent().removeClass("hidden_active");
-  basketCart.parent().toggleClass("hidden_active");
+  signForm.parent().fadeOut();
+  basketCart.parent().fadeToggle();
 });
 
 //remove Element in basket
@@ -60,7 +59,7 @@ cartCase.on("click", function(e) {
   }
   if (numOfItems === 0) {
     basketCounter.addClass("hidden");
-    basketCart.parent().toggleClass("hidden_active");
+    basketCart.parent().fadeOut();
   }
 });
 
@@ -84,8 +83,8 @@ navSelectBtn.on("keypress", function(e) {
 // functions
 
 function animateMenu() {
-  basketCart.parent().removeClass("hidden_active");
-  signForm.parent().removeClass("hidden_active");
+  basketCart.parent().fadeOut();
+  signForm.parent().fadeOut();
   navSelectBtn.addClass("active");
   animateSpan.addClass("menu_animate_span_disapear");
   setTimeout(() => menu.addClass("menu_animate"), 600);

@@ -60,7 +60,79 @@ $(document).ready(function() {
     $(dots[index]).css("background-image", "url(" + imageSrc + ")");
   }
 
+  //product-item counter
+
+  let productItemCount = parseInt($("#item-form-counter-number").text());
+  $("#item-counter-plus").on("click", function(e) {
+    e.preventDefault();
+    productItemCount++;
+    $("#item-form-counter-number").text(productItemCount);
+  });
+
+  $("#item-counter-minus").on("click", function(e) {
+    e.preventDefault();
+    productItemCount--;
+    $("#item-form-counter-number").text(productItemCount);
+  });
+
+  // <--reviews likes-->
+  // variables
+  let likesCounter = parseInt(
+    $("#review-likes-idNumber .review-card_like_good").text()
+  );
+  let dislikesCounter = parseInt(
+    $("#review-likes-idNumber .review-card_like_bad").text()
+  );
+  // handlers
+  $("#review-likes-idNumber .review-card_like_btn").on("click", function() {
+    $(this).prop("disabled", true);
+    $("#review-likes-idNumber .review-card_dislike_btn").prop("disabled", true);
+    likesCounter++;
+    $("#review-likes-idNumber .review-card_like_good").text(likesCounter);
+  });
+
+  $("#review-likes-idNumber .review-card_dislike_btn").on("click", function() {
+    $(this).prop("disabled", true);
+    $("#review-likes-idNumber .review-card_like_btn").prop("disabled", true);
+    dislikesCounter++;
+    $("#review-likes-idNumber .review-card_like_bad").text(dislikesCounter);
+  });
+
+  function addHandlersLike(id) {
+    var likes = parseInt(
+      $("#review-likes-" + id + " .review-card_like_good").text()
+    );
+    var dislikes = parseInt(
+      $("#review-likes-" + id + " .review-card_like_bad").text()
+    );
+    var counterLike = $("#review-likes-" + id + " .review-card_like_good");
+    var counterDislike = $("#review-likes-" + id + " .review-card_like_bad");
+    var likeBtn = $("review-likes-" + id + " .review-card_like_btn");
+    var dislikeBtn = $("review-likes-" + id + " .review-card_dislike_btn");
+
+    // handlers
+
+    likeBtn.on("click", function(e) {
+      e.preventDefault();
+      $(this).prop("disabled", true);
+      dislikeBtn.prop("disabled", true);
+      likes++;
+      counterLike.text(likes);
+    });
+
+    dislikeBtn.on("click", function(e) {
+      e.preventDefault();
+      $(this).prop("disabled", true);
+      likeBtn.prop("disabled", true);
+      dislikes++;
+      counterDislike.text(dislikes);
+    });
+  }
+
+  // <--reviews likes-->
+
   // Page UP
+
   $(window).scroll(function() {
     if ($(this).scrollTop() > 700) {
       $(".page-up").fadeIn();

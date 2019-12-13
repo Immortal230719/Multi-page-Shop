@@ -8,7 +8,19 @@
   <title>product</title>
 </head>
 <body>
-    //= template/sprite.html
+  <!-- SVG sprites START -->
+
+
+
+  //= template/sprite.html
+
+
+  
+
+  <!-- SVG sprites END -->
+
+
+
     <header id="up">
       //= template/header.html
     </header>
@@ -35,7 +47,7 @@
           <div class="grid-375_wrapper grid-big">
             <h3 class="item_category">lifestyle</h3>
             <h2 class="item_name">LeBron XIII Premium AS iD</h2>
-            <div class="item_rating">
+            <div id="product-item-rating" class="item_rating">
               <div class="item_rating_stars">
                 <svg class="item_rating_stars_icon">
                   <use xlink:href="#rating-full_star"></use>
@@ -87,10 +99,10 @@
               <div class="item_form_flex">
                 <p class="item_form_price">$250.00 <span>350.00</span></p>
                 <span class="item_form_discount">-30%</span>
-                <div class="item_form_counter">
-                  <button class="item_form_counter_minus">-</button>
-                  <span id="itemFormCounterNumber">2</span>
-                  <button class="item_form_counter_plus">+</button>
+                <div class="item_form_counter unselectable" >
+                  <button id="item-counter-minus" class="item_form_counter_minus">-</button>
+                  <span id="item-form-counter-number">1</span>
+                  <button id="item-counter-plus" class="item_form_counter_plus">+</button>
                 </div>
                 <button class="item_form_btn">
                   <svg class="item_form_btn_icon">
@@ -144,6 +156,161 @@
         </div>
       </div>
     </section>
+
+    <!-- product's item section End -->
+
+    <!-- product item Reviews Start -->
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews_tabs">
+          <ul class="reviews_tabs_item">
+            <li tabindex="0" class="reviews_tab">Reviews</li>
+            <li tabindex="0" class="reviews_tab">Specification</li>
+            <li tabindex="0" class="reviews_tab">Descrition</li>
+          </ul>
+          <div class="reviews_share">
+            <svg class="reviews_share_icon">
+              <use xlink:href="#share_icon"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="reviews_wrapper">
+          <ul class="reviews_list">
+            <li class="reviews_list_title">All Reviews <span id="reviews_counter">23</span></li>
+            <li class="reviews_list_item">
+              //= template/review-card.html
+            </li>
+            <li class="reviews_list_item">
+              //= template/review-card.html
+            </li>
+            <li class="reviews_list_item">
+              //= template/review-card.html
+            </li>
+            <li class="reviews_list_item">
+              //= template/review-card.html
+            </li>
+          </ul>
+          <div class="reviews_assessment">
+            <h3 class="reviews_assessment_title">Assessment Reviews</h3>
+            <ul class="reviews_assessment_list">
+              <li class="reviews_assessment_item">
+                <div class="reviews_assessment_rating">
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                </div>
+                <span id="reviews_rating-percent-5stars" class="reviews_assessment_percent">68%</span>
+                <span id="reviews_rating-count-5stars" class="reviews_assessment_counter">13 Reviews</span>
+              </li>
+              <li class="reviews_assessment_item">
+                <div class="reviews_assessment_rating">
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                </div>
+                <span id="reviews_rating-percent-4stars" class="reviews_assessment_percent">22%</span>
+                <span id="reviews_rating-count-4stars" class="reviews_assessment_counter">8 Reviews</span>
+              </li>
+              <li class="reviews_assessment_item">
+                <div class="reviews_assessment_rating">
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                </div>
+                <span id="reviews_rating-percent-3stars" class="reviews_assessment_percent">10%</span>
+                <span id="reviews_rating-count-3stars" class="reviews_assessment_counter">2 Reviews</span>
+              </li>
+              <li class="reviews_assessment_item">
+                <div class="reviews_assessment_rating">
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                </div>
+                <span id="reviews_rating-percent-2stars" class="reviews_assessment_percent">0%</span>
+                <span id="reviews_rating-count-2stars" class="reviews_assessment_counter">0 Reviews</span>
+              </li>
+              <li class="reviews_assessment_item">
+                <div class="reviews_assessment_rating">
+                  <svg class="reviews_assessment_rating_icon-orange">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                  <svg class="reviews_assessment_rating_icon-grey">
+                    <use xlink:href="#rating-full_star"></use>
+                  </svg>
+                </div>
+                <span id="reviews_rating-percent-1stars" class="reviews_assessment_percent">0%</span>
+                <span id="reviews_rating-count-1stars" class="reviews_assessment_counter">0 Reviews</span>
+              </li>
+            </ul>
+            <button class="reviews_assessment_btn">Add Review</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    
   
 
 

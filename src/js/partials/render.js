@@ -3,7 +3,7 @@
 // UI Elements
 
 const renderBox = document.querySelector("#render-product");
-const loadMoreBtn = document.querySelector(".load_more");
+const loadMoreBtn = document.querySelector("#load-more");
 
 //variables
 

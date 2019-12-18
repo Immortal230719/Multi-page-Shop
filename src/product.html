@@ -27,14 +27,14 @@
   
   <!-- title Start -->
   
-    <section class="product">
-      <div class="product_wrapper">
-        <h1 class="product_title">MEN'S LIFESTYLE SHOES</h1>
-        <div class="product_subtitle">
-          <a href="index.html" class="product_links">Home <span>></span></a>
-          <a href="catalog-slider.html" class="product_links">Catalog <span>></span></a>
-          <a href="#" class="product_links">Men <span>></span></a>
-          <a href="#" class="product_links">Shoes</a>
+    <section class="head">
+      <div class="head_wrapper">
+        <h1 class="head_title">MEN'S LIFESTYLE SHOES</h1>
+        <div class="head_subtitle">
+          <a href="index.html" class="head_links">Home <span>></span></a>
+          <a href="catalog-slider.html" class="head_links">Catalog <span>></span></a>
+          <a href="#" class="head_links">Men <span>></span></a>
+          <a href="#" class="head_links">Shoes</a>
         </div>
       </div>
     </section>
@@ -43,8 +43,8 @@
 
     <section class="item">
       <div class="container">
-        <div class="grid-375">
-          <div class="grid-375_wrapper grid-big">
+        <div class="grid-700">
+          <div class="grid-700_wrapper">
             <h3 class="item_category">lifestyle</h3>
             <h2 class="item_name">LeBron XIII Premium AS iD</h2>
             <div id="product-item-rating" class="item_rating">
@@ -115,7 +115,7 @@
             <hr class="item_hr">
             <div class="item_form_flex">
               <div class="item_compare">
-                <a href="#">
+                <a href="compare.html">
                   <svg class="item_compare_icon">
                     <use xlink:href="#compare_icon"></use>
                   </svg>
@@ -134,7 +134,7 @@
           </div>
 
           <!-- carousel of images Start -->
-          <div class="grid-375_wrapper grid-big paddingZero">
+          <div class="grid-700_wrapper paddingZero">
             <div id="itemSlider" class="item_carousel">
                 <div class="item_carousel_wrapper">
                   <a href="#"><img class="item_carousel_img" src="img/product-item/first.jpg" alt="item-img"></a>
@@ -305,7 +305,44 @@
             <button class="reviews_assessment_btn">Add Review</button>
           </div>
         </div>
+        <div class="reviews_wrapper">
+            <div class="reviews_load-footer">
+              <button id="load-more-reviews" class="reviews_more">
+                <svg class="reviews_more_icon">
+                  <use xlink:href="#load_icon"></use>
+                </svg>
+                Load More
+              </button>
+              <nav class="reviews_nav">
+                <ul>
+                  <li id="reviews-nav-page1" ><button class="reviews_nav_page">1</button></li>
+                  <li id="reviews-nav-page2" ><button class="reviews_nav_page">2</button></li>
+                  <li id="reviews-nav-page3" ><button class="reviews_nav_page">3</button></li>
+                  <li id="reviews-nav-page4" ><button class="reviews_nav_page">4</button></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
       </div>
+        <div class="container">
+          <div id="render-product" class="grid-375">
+            <div class="grid-375_wrapper">
+              <div class="popular">
+                <svg class="popular_more_similar-icon">
+                  <use xlink:href="#similar_icon"></use>
+                </svg>
+                <h3 class="popular_title">similar products</h3>
+                <p class="popular_descr">Proin hendrerit suscipit justo.</p>
+                <a href="catalog-slider.html" class="popular_more">more products
+                  <svg class="popular_more_icon">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>        
+            </div>        
+          </div>
+        </div>
+      
     </section>
 
 

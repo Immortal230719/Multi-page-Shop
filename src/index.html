@@ -139,7 +139,9 @@
       <div id="render-product" class="grid-375">
         <div class="grid-375_wrapper">
           <div class="popular">
-            <img src="img/star.svg" alt="star">
+            <svg class="popular_star-icon">
+              <use xlink:href="#star-with-round_icon"></use>
+            </svg>
             <h3 class="popular_title">popular products</h3>
             <p class="popular_descr">Proin hendrerit suscipit justo, ctus volutpat leo sollicitudin ac.</p>
             <a href="catalog-slider.html" class="popular_more">popular_more 
@@ -155,7 +157,7 @@
 
 <!-- button LOAD MORE -->    
     <div class="container">
-      <button class="load_more" type="button">        
+      <button id="load-more" class="load_more" type="button">        
           <svg class="load_more_icon">
             <use xlink:href="#load_icon"></use>
           </svg>

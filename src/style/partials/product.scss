@@ -99,7 +99,7 @@
   align-items: center;
   height: 100%;
   background-color: #222222;
-  padding: 78px 95px;
+  padding: 78px 95px 0 95px;
   &_title {
     margin-top: 40px;
     font-family: "Oswald";
@@ -133,6 +133,16 @@
       stroke: #111;
       stroke-width: 31px;
     }
+    &_similar-icon {
+      width: 50px;
+      height: 50px;
+      fill: #3a54d6;
+    }
+  }
+  &_star-icon {
+    width: 50px;
+    height: 50px;
+    fill: #3a54d6;
   }
 }
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your cart</title>
+  <link rel="stylesheet" href="css/user-cart.css">
+</head>
+<body>
+    <!-- SVG sprites START -->
+
+
+
+    //= template/sprite.html
+
+
+  
+
+    <!-- SVG sprites END -->
+  
+  
+  
+    <header id="up">
+      //= template/header.html
+    </header>
+  
+  <!-- title -->
+  
+    <section class="contacts">
+      <div class="contacts_wrapper">
+        <h1 class="contacts_title">your cart</h1>
+        <div class="contacts_subtitle">
+          <a href="#" class="contacts_links">Home <span>></span></a>
+          <a href="#" class="contacts_links">Profile <span>></span></a>
+          <a href="user-card.html" class="contacts_links">Cart</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="user-cart">
+      <div class="container">
+        <div class="user-cart_wrapper">
+          <ul class="user-cart_tabs">
+            <li tabindex="0">
+              <svg class="user-cart_tabs_icon">
+                <use xlink:href="#sand-clock_icon"></use>
+              </svg>
+              Checkout
+            </li tabindex="0">
+            <li tabindex="0">Shipping information</li>
+            <li tabindex="0">Payment</li>
+          </ul>
+          <div class="user-cart_in-tabs">
+            <div class="user-cart_checkout">
+              //= template/product-item-in-cart.html
+              //= template/product-item-in-cart.html
+              //= template/product-item-in-cart.html
+              <div class="user-cart_chekout_total">
+                <svg class="user-cart_chekout_total_icon">
+                  <use xlink:href="#clock_icon"></use>
+                </svg>
+                <p class="user-cart_chekout_total_text">Donec vehicula vulputate vulputate praesent varius nisi facilisis.</p>
+                <p class="user-cart_chekout_total_value">Total Value:<span>$ 829.00</span></p>
+                <button class="user-cart_chekout_total_btn" type="button">
+                  <svg class="user-cart_chekout_total_reload">
+                    <use xlink:href="#load_icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="user-cart_shipping"></div>
+            <div class="user-cart_payment"></div>
+            <div class="user-cart_next">
+              <button class="user-cart_next_btn" type="button">
+                Next step <span> ></span>
+              </button>
+            </div>           
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+      <!-- section Subscribe Start -->
+
+  //= template/subscribe.html
+
+  //= template/footer.html
+
+    <a href="#up" class="page-up">
+      <svg class="page-up_icon">
+        <use xlink:href="#arrow-up_icon"></use>
+      </svg>
+    </a>
+
+  
+  <script src="js/user-cart.js"></script>
+  
+</body>
+</html>

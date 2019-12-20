@@ -1,0 +1,262 @@
+//some libs
+
+@import "partials/fonts.scss";
+@import "lib/reset.scss";
+
+//variables
+
+$main-color: rgb(223, 229, 231);
+$main-color2: #3a54d6;
+$text-color: #111111;
+$menu-link-color: #2943c4da;
+
+@import "partials/header.scss";
+@import "partials/subscribe.scss";
+@import "partials/footer.scss";
+@import "partials/pageup.scss";
+@import "partials/item-in-cart.scss";
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline-color: $main-color2;
+  }
+}
+
+// my classes
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.hidden {
+  display: none;
+  &_active {
+    display: block;
+  }
+  &_grid {
+    display: grid;
+  }
+  &_flex {
+    display: flex;
+  }
+}
+
+.over-flow {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  &_animate {
+    left: 0;
+  }
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+// grids
+
+.grid-375 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-auto-rows: 990px;
+  grid-auto-flow: dense;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  &_wrapper {
+    z-index: 5;
+    position: relative;
+    box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  }
+}
+
+.grid-500 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-auto-rows: 75px;
+  grid-auto-flow: dense;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  &_wrapper {
+    position: relative;
+    box-shadow: inset -1px -1px 0 0 #e6e6e6;
+    background-color: #fff;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.grid-big {
+  grid-row-end: span 2;
+  grid-column-end: span 2;
+}
+
+.grid-long {
+  grid-column-end: span 2;
+}
+
+.grid-tall {
+  grid-row-end: span 2;
+}
+
+.products {
+  position: relative;
+}
+
+.grid-empty {
+  height: 100%;
+  background-color: rgb(121, 121, 121);
+  box-shadow: inset -1px -1px 0 0 #e6e6e6;
+}
+
+.contacts {
+  margin-top: 75px;
+  height: 235px;
+  width: 100%;
+  padding: 55px 0 125px 0;
+  background-color: $main-color;
+  &_title {
+    font-family: "Oswald";
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: $text-color;
+    text-transform: uppercase;
+  }
+  &_subtitle {
+    margin: 0 auto;
+    margin-top: 14px;
+    text-align: center;
+    a {
+      font-family: "Poppins";
+      font-size: 12px;
+      color: #00000098;
+      span {
+        position: relative;
+        top: 2px;
+        margin: 0 8px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.user-cart {
+  margin-top: -74px;
+  z-index: 5;
+  min-height: 150px;
+  &_wrapper {
+    z-index: 5;
+    position: relative;
+  }
+  &_tabs {
+    display: flex;
+    box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15),
+      inset 0px -1px 0 0 rgba(255, 255, 255, 0.3);
+    &_icon {
+      width: 9px;
+      height: 12px;
+      fill: $text-color;
+      margin-right: 10px;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      height: 75px;
+      background-color: $main-color;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: $text-color;
+      box-shadow: inset 0px -1px 0 0 rgb(255, 255, 255);
+      cursor: pointer;
+      &:focus {
+        background-color: rgba(67, 133, 255, 0.74);
+      }
+    }
+  }
+  &_next {
+    box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15);
+    &_btn {
+      height: 75px;
+      width: 100%;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: $text-color;
+      background-color: $main-color;
+      span {
+        position: relative;
+        top: 3px;
+        color: $main-color2;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+  &_chekout {
+    &_total {
+      display: flex;
+      align-items: center;
+      padding: 0 250px;
+      height: 140px;
+      box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15), inset 0px -1px 0 0 #e6e6e6;
+      background-color: #ffffff;
+      &_icon {
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        fill: #feb312;
+      }
+      &_text {
+        margin-right: 170px;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+        color: #888888;
+      }
+      &_value {
+        margin-right: 106px;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-color;
+        span {
+          font-weight: bold;
+          margin-left: 30px;
+          color: $main-color2;
+        }
+      }
+      &_btn {
+        width: 50px;
+        height: 50px;
+        border: solid 1px #e6e6e6;
+        background-color: #ffffff;
+        border-radius: 100%;
+        cursor: pointer;
+      }
+      &_reload {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 20px;
+        fill: $text-color;
+      }
+    }
+  }
+}

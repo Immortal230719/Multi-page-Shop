@@ -111,8 +111,6 @@ $(document).ready(function() {
     var likeBtn = $("review-likes-" + id + " .review-card_like_btn");
     var dislikeBtn = $("review-likes-" + id + " .review-card_dislike_btn");
 
-    // handlers
-
     likeBtn.on("click", function(e) {
       e.preventDefault();
       $(this).prop("disabled", true);

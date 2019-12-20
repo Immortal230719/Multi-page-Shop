@@ -43,6 +43,11 @@
     font-size: 21px;
     letter-spacing: 2.1px;
     color: $text-color;
+    span {
+      position: relative;
+      right: 20px;
+      text-transform: uppercase;
+    }
   }
   &_search {
     width: 75px;

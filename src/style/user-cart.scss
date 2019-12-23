@@ -63,10 +63,10 @@ $menu-link-color: #2943c4da;
 
 // grids
 
-.grid-375 {
+.grid-750 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  grid-auto-rows: 990px;
+  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+  grid-auto-rows: 450px;
   grid-auto-flow: dense;
   box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
   &_wrapper {
@@ -76,16 +76,31 @@ $menu-link-color: #2943c4da;
   }
 }
 
-.grid-500 {
+.grid-250 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-auto-rows: 75px;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 60px;
   box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
   &_wrapper {
     position: relative;
-    box-shadow: inset -1px -1px 0 0 #e6e6e6;
     background-color: #fff;
+    input {
+      border: none;
+      width: 250px;
+      height: 60px;
+      padding-left: 25px;
+      box-shadow: inset -1px -1px 0 0 #ececec;
+    }
+    input::placeholder {
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.67;
+      color: #888888;
+    }
+    input.shipping-address {
+      width: 100%;
+    }
   }
 }
 
@@ -165,7 +180,13 @@ $menu-link-color: #2943c4da;
     &_icon {
       width: 9px;
       height: 12px;
-      fill: $text-color;
+      fill: #fff;
+      margin-right: 10px;
+    }
+    &_icon-checked {
+      width: 11px;
+      height: 7px;
+      fill: #3a54d6;
       margin-right: 10px;
     }
     li {
@@ -180,25 +201,49 @@ $menu-link-color: #2943c4da;
       font-weight: 600;
       letter-spacing: 1.2px;
       color: $text-color;
-      box-shadow: inset 0px -1px 0 0 rgb(255, 255, 255);
+      box-shadow: inset 1px -1px 0 0 rgb(207, 207, 207);
       cursor: pointer;
       &:focus {
-        background-color: rgba(67, 133, 255, 0.74);
+        background-color: $main-color2;
+        color: #fff;
       }
     }
   }
   &_next {
+    display: flex;
+    justify-content: space-around;
     box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
     &_btn {
       height: 75px;
-      width: 100%;
+      width: 50%;
       cursor: pointer;
       font-family: "Poppins";
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.2px;
       color: $text-color;
-      background-color: $main-color;
+      background-color: #ffffff;
+      text-transform: uppercase;
+      span {
+        position: relative;
+        top: 3px;
+        color: $main-color2;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    &_btn-back {
+      height: 75px;
+      width: 50%;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: $text-color;
+      background-color: #ffffff;
+      text-transform: uppercase;
       span {
         position: relative;
         top: 3px;
@@ -256,6 +301,95 @@ $menu-link-color: #2943c4da;
         width: 22px;
         height: 20px;
         fill: $text-color;
+      }
+    }
+  }
+  &_shipping {
+    &_or {
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: solid 1px #e6e6e6;
+      background-color: #ffffff;
+      border-radius: 100%;
+      font-family: "Poppins";
+      font-size: 14px;
+      font-weight: 500;
+      color: #bbbbbb;
+      text-align: center;
+      padding: 13px;
+    }
+    &_sign {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &_title {
+        margin-top: 72px;
+        font-family: "Oswald";
+        font-size: 20px;
+        color: #111111;
+      }
+      &_wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        input {
+          padding: 25px;
+          width: 250px;
+          height: 60px;
+          border-radius: 10px 10px 0 0;
+          border: solid 1px #dddddd;
+          border-bottom: 0;
+          background-color: #ffffff;
+          &:nth-child(2) {
+            border-radius: 0;
+          }
+        }
+      }
+      &_forget {
+        margin-top: 25px;
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 300;
+        text-align: center;
+        color: $main-color2;
+      }
+      &_btn {
+        width: 250px;
+        height: 60px;
+        background-color: $main-color2;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+      }
+    }
+
+    &_post {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &_title {
+        margin-top: 72px;
+        font-family: "Oswald";
+        font-size: 20px;
+        text-align: center;
+        color: #111111;
+      }
+      &_form {
+        display: block;
+        margin-top: 40px;
+        width: 500px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: solid 1px #dddddd;
       }
     }
   }

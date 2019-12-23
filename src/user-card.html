@@ -41,18 +41,28 @@
     <section class="user-cart">
       <div class="container">
         <div class="user-cart_wrapper">
-          <ul class="user-cart_tabs">
-            <li tabindex="0">
+          <ul id="user-cart-tabs" class="user-cart_tabs">
+            <li id="tabCheckout" tabindex="0" autofocus>
               <svg class="user-cart_tabs_icon">
                 <use xlink:href="#sand-clock_icon"></use>
               </svg>
               Checkout
-            </li tabindex="0">
-            <li tabindex="0">Shipping information</li>
-            <li tabindex="0">Payment</li>
+            </li>
+            <li id="tabShipping" tabindex="0">
+              <svg class="user-cart_tabs_icon">
+                <use xlink:href=""></use>
+              </svg>
+              Shipping information
+            </li>
+            <li id="tabPayment" tabindex="0">
+              <svg class="user-cart_tabs_icon">
+                <use xlink:href=""></use>
+              </svg>
+              Payment
+            </li>
           </ul>
-          <div class="user-cart_in-tabs">
-            <div class="user-cart_checkout">
+          <div  class="user-cart_in-tabs">
+            <div id="checkout" class="user-cart_checkout">
               //= template/product-item-in-cart.html
               //= template/product-item-in-cart.html
               //= template/product-item-in-cart.html
@@ -69,12 +79,73 @@
                 </button>
               </div>
             </div>
-            <div class="user-cart_shipping"></div>
-            <div class="user-cart_payment"></div>
-            <div class="user-cart_next">
-              <button class="user-cart_next_btn" type="button">
+            <div id="shipping" class="user-cart_shipping hidden">
+              <div class="grid-750">
+                <div class="grid-750_wrapper">
+                  <span class="user-cart_shipping_or">or</span>
+                  <div class="user-cart_shipping_sign">
+                    <div class="user-cart_shipping_sign_title">
+                      Sign in
+                    </div>
+                    <form action="#" class="user-cart_shipping_sign_form">
+                      <div class="user-cart_shipping_sign_wrapper">
+                        <input tabindex="0" type="email" name="email" placeholder="E-mail">
+                        <input tabindex="0" type="password" name="password" placeholder="Password">           
+                      </div>      
+                      <button tabindex="0" type="submit" class="user-cart_shipping_sign_btn">Sign in</button>                      
+                    </form>
+                    <a class="user-cart_shipping_sign_forget" tabindex="0" href="#" target="_blank">Forgot your password?</a>
+                  </div>
+                </div>
+                <div class="grid-750_wrapper">
+                  <div class="user-cart_shipping_post">
+                    <h2 class="user-cart_shipping_post_title">
+                      Fill all the fields
+                    </h2>
+                    <form action="#" class="user-cart_shipping_post_form">
+                      <div class="grid-250">
+                        <div class="grid-250_wrapper">
+                          <input name="name" type="text" placeholder="First Name">
+                        </div>
+                        <div class="grid-250_wrapper">
+                          <input name="secondName" type="text" placeholder="Second Name">
+                        </div>
+                        <div class="grid-250_wrapper">
+                          <input name="email" type="email" placeholder="E-mail">
+                        </div>
+                        <div class="grid-250_wrapper">
+                          <input name="phone" type="tel" placeholder="Phone">
+                        </div>
+                        <div class="grid-250_wrapper">
+                          <input name="city" type="text" placeholder="City">
+                        </div>
+                        <div class="grid-250_wrapper">
+                          <input name="zip" type="text" placeholder="Zip/Posctal Code">
+                        </div>
+                        <div class="grid-250_wrapper grid-long">
+                          <input class="shipping-address" name="address" type="text" placeholder="Address">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="payment" class="user-cart_payment hidden">
+              <div class="grid-750">
+                <div class="grid-750_wrapper"></div>
+                <div class="grid-750_wrapper"></div>
+              </div>
+            </div>
+            <div  class="user-cart_next">
+              <button id="userCartBack" class="user-cart_next_btn-back hidden" type="button">
+                <span>< </span>
+                previous step 
+              </button>
+              <button id="userCartNext" class="user-cart_next_btn" type="button">
                 Next step <span> ></span>
               </button>
+              
             </div>           
           </div>
           
@@ -103,7 +174,9 @@
       </svg>
     </a>
 
-  
+  <script src="js/lib/jquery-3.4.1.min.js"></script>
+  <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/lib/wow.min.js"></script>
   <script src="js/user-cart.js"></script>
   
 </body>

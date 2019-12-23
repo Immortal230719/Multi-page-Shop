@@ -278,13 +278,16 @@
     margin-right: 30px;
   }
   &_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 375px;
     height: 60px;
     background-color: $main-color2;
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 500;
-    color: $text-color;
+    color: #fff;
     border-radius: 0 0 10px 10px;
     cursor: pointer;
   }

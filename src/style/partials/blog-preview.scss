@@ -1,0 +1,65 @@
+.blogs-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  figure {
+    margin: 0;
+  }
+  &_img {
+    width: 470px;
+    height: 300px;
+    background: #ddd;
+  }
+  &_category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 4px;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 25px;
+    box-shadow: 0px 5px 20px 0 rgba(58, 84, 214, 0.4);
+    background-color: #3a54d6;
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fefeff;
+  }
+  &_title {
+    margin-top: 35px;
+    font-family: "Oswald";
+    font-size: 20px;
+    text-align: center;
+    color: #111111;
+  }
+  &_wrapper {
+    margin-top: 25px;
+    display: flex;
+  }
+  &_comments {
+    font-family: "Poppins";
+    font-size: 12px;
+    color: #bbbbbb;
+    margin-right: 30px;
+    &_icon {
+      margin-right: 6px;
+      height: 14px;
+      width: 14px;
+      fill: #bbbbbb;
+    }
+  }
+  &_date {
+    font-family: "Poppins";
+    font-size: 12px;
+    color: #bbbbbb;
+    &_icon {
+      margin-right: 6px;
+      height: 14px;
+      width: 14px;
+      fill: #bbbbbb;
+    }
+  }
+}

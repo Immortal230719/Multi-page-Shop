@@ -8,171 +8,174 @@
   <link rel="stylesheet" href="css/user-cart.css">
 </head>
 <body>
-    <!-- SVG sprites START -->
+<!-- SVG sprites START -->
 
 
 
-    //= template/sprite.html
+  //= template/sprite.html
 
 
   
 
-    <!-- SVG sprites END -->
+<!-- SVG sprites END -->
   
+ 
   
+  <header id="up">
+    //= template/header.html
+  </header>
   
-    <header id="up">
-      //= template/header.html
-    </header>
+<!-- Section Title Start -->
   
-  <!-- title -->
-  
-    <section class="contacts">
-      <div class="contacts_wrapper">
-        <h1 class="contacts_title">your cart</h1>
-        <div class="contacts_subtitle">
-          <a href="#" class="contacts_links">Home <span>></span></a>
-          <a href="#" class="contacts_links">Profile <span>></span></a>
-          <a href="user-card.html" class="contacts_links">Cart</a>
-        </div>
+  <section class="contacts">
+    <div class="contacts_wrapper">
+      <h1 class="contacts_title">your cart</h1>
+      <div class="contacts_subtitle">
+        <a href="#" class="contacts_links">Home <span>></span></a>
+        <a href="#" class="contacts_links">Profile <span>></span></a>
+        <a href="user-card.html" class="contacts_links">Cart</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="user-cart">
-      <div class="container">
-        <div class="user-cart_wrapper">
-          <ul id="user-cart-tabs" class="user-cart_tabs">
-            <li id="tabCheckout" tabindex="0" autofocus>
-              <svg class="user-cart_tabs_icon">
-                <use xlink:href="#sand-clock_icon"></use>
+<!-- Section Title End -->
+
+<!-- Section User-cart content Start -->
+
+  <section class="user-cart">
+    <div class="container">
+      <div class="user-cart_wrapper">
+        <ul id="user-cart-tabs" class="user-cart_tabs">
+          <li id="tabCheckout" tabindex="0" autofocus>
+            <svg class="user-cart_tabs_icon">
+              <use xlink:href="#sand-clock_icon"></use>
+            </svg>
+            Checkout
+          </li>
+          <li id="tabShipping" tabindex="0">
+            <svg class="user-cart_tabs_icon">
+              <use xlink:href=""></use>
+            </svg>
+            Shipping information
+          </li>
+          <li id="tabPayment" tabindex="0">
+            <svg class="user-cart_tabs_icon">
+              <use xlink:href=""></use>
+            </svg>
+            Payment
+          </li>
+        </ul>
+        <div  class="user-cart_in-tabs">
+          <div id="checkout" class="user-cart_checkout">
+            //= template/product-item-in-cart.html
+            //= template/product-item-in-cart.html
+            //= template/product-item-in-cart.html
+            <div class="user-cart_chekout_total">
+              <svg class="user-cart_chekout_total_icon">
+                <use xlink:href="#clock_icon"></use>
               </svg>
-              Checkout
-            </li>
-            <li id="tabShipping" tabindex="0">
-              <svg class="user-cart_tabs_icon">
-                <use xlink:href=""></use>
-              </svg>
-              Shipping information
-            </li>
-            <li id="tabPayment" tabindex="0">
-              <svg class="user-cart_tabs_icon">
-                <use xlink:href=""></use>
-              </svg>
-              Payment
-            </li>
-          </ul>
-          <div  class="user-cart_in-tabs">
-            <div id="checkout" class="user-cart_checkout">
-              //= template/product-item-in-cart.html
-              //= template/product-item-in-cart.html
-              //= template/product-item-in-cart.html
-              <div class="user-cart_chekout_total">
-                <svg class="user-cart_chekout_total_icon">
-                  <use xlink:href="#clock_icon"></use>
+              <p class="user-cart_chekout_total_text">Donec vehicula vulputate vulputate praesent varius nisi facilisis.</p>
+              <p class="user-cart_chekout_total_value">Total Value:<span>$ 829.00</span></p>
+              <button class="user-cart_chekout_total_btn" type="button">
+                <svg class="user-cart_chekout_total_reload">
+                  <use xlink:href="#load_icon"></use>
                 </svg>
-                <p class="user-cart_chekout_total_text">Donec vehicula vulputate vulputate praesent varius nisi facilisis.</p>
-                <p class="user-cart_chekout_total_value">Total Value:<span>$ 829.00</span></p>
-                <button class="user-cart_chekout_total_btn" type="button">
-                  <svg class="user-cart_chekout_total_reload">
-                    <use xlink:href="#load_icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div id="shipping" class="user-cart_shipping hidden">
-              <div class="grid-750">
-                <div class="grid-750_wrapper">
-                  <span class="user-cart_shipping_or">or</span>
-                  <div class="user-cart_shipping_sign">
-                    <div class="user-cart_shipping_sign_title">
-                      Sign in
-                    </div>
-                    <form action="#" class="user-cart_shipping_sign_form">
-                      <div class="user-cart_shipping_sign_wrapper">
-                        <input tabindex="0" type="email" name="email" placeholder="E-mail">
-                        <input tabindex="0" type="password" name="password" placeholder="Password">           
-                      </div>      
-                      <button tabindex="0" type="submit" class="user-cart_shipping_sign_btn">Sign in</button>                      
-                    </form>
-                    <a class="user-cart_shipping_sign_forget" tabindex="0" href="#" target="_blank">Forgot your password?</a>
-                  </div>
-                </div>
-                <div class="grid-750_wrapper">
-                  <div class="user-cart_shipping_post">
-                    <h2 class="user-cart_shipping_post_title">
-                      Fill all the fields
-                    </h2>
-                    <form action="#" class="user-cart_shipping_post_form">
-                      <div class="grid-250">
-                        <div class="grid-250_wrapper">
-                          <input name="name" type="text" placeholder="First Name">
-                        </div>
-                        <div class="grid-250_wrapper">
-                          <input name="secondName" type="text" placeholder="Second Name">
-                        </div>
-                        <div class="grid-250_wrapper">
-                          <input name="email" type="email" placeholder="E-mail">
-                        </div>
-                        <div class="grid-250_wrapper">
-                          <input name="phone" type="tel" placeholder="Phone">
-                        </div>
-                        <div class="grid-250_wrapper">
-                          <input name="city" type="text" placeholder="City">
-                        </div>
-                        <div class="grid-250_wrapper">
-                          <input name="zip" type="text" placeholder="Zip/Posctal Code">
-                        </div>
-                        <div class="grid-250_wrapper grid-long">
-                          <input class="shipping-address" name="address" type="text" placeholder="Address">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="payment" class="user-cart_payment hidden">
-              <div class="grid-750">
-                <div class="grid-750_wrapper"></div>
-                <div class="grid-750_wrapper"></div>
-              </div>
-            </div>
-            <div  class="user-cart_next">
-              <button id="userCartBack" class="user-cart_next_btn-back hidden" type="button">
-                <span>&lt;</span>
-                previous step 
               </button>
-              <button id="userCartNext" class="user-cart_next_btn" type="button">
-                Next step <span>&gt;</span>
-              </button>
-              
-            </div>           
+            </div>
           </div>
-          
-        </div>
+          <div id="shipping" class="user-cart_shipping hidden">
+            <div class="grid-750">
+              <div class="grid-750_wrapper">
+                <span class="user-cart_shipping_or">or</span>
+                <div class="user-cart_shipping_sign">
+                  <div class="user-cart_shipping_sign_title">
+                    Sign in
+                  </div>
+                  <form action="#" class="user-cart_shipping_sign_form">
+                    <div class="user-cart_shipping_sign_wrapper">
+                      <input tabindex="0" type="email" name="email" placeholder="E-mail">
+                      <input tabindex="0" type="password" name="password" placeholder="Password">           
+                    </div>      
+                    <button tabindex="0" type="submit" class="user-cart_shipping_sign_btn">Sign in</button>                      
+                  </form>
+                  <a class="user-cart_shipping_sign_forget" tabindex="0" href="#" target="_blank">Forgot your password?</a>
+                </div>
+              </div>
+              <div class="grid-750_wrapper">
+                <div class="user-cart_shipping_post">
+                  <h2 class="user-cart_shipping_post_title">
+                    Fill all the fields
+                  </h2>
+                  <form action="#" class="user-cart_shipping_post_form">
+                    <div class="grid-250">
+                      <div class="grid-250_wrapper">
+                        <input name="name" type="text" placeholder="First Name">
+                      </div>
+                      <div class="grid-250_wrapper">
+                        <input name="secondName" type="text" placeholder="Second Name">
+                      </div>
+                      <div class="grid-250_wrapper">
+                        <input name="email" type="email" placeholder="E-mail">
+                      </div>
+                      <div class="grid-250_wrapper">
+                        <input name="phone" type="tel" placeholder="Phone">
+                      </div>
+                      <div class="grid-250_wrapper">
+                        <input name="city" type="text" placeholder="City">
+                      </div>
+                      <div class="grid-250_wrapper">
+                        <input name="zip" type="text" placeholder="Zip/Posctal Code">
+                      </div>
+                      <div class="grid-250_wrapper grid-long">
+                        <input class="shipping-address" name="address" type="text" placeholder="Address">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="payment" class="user-cart_payment hidden">
+            <div class="grid-750">
+              <div class="grid-750_wrapper"></div>
+              <div class="grid-750_wrapper"></div>
+            </div>
+          </div>
+          <div  class="user-cart_next">
+            <button id="userCartBack" class="user-cart_next_btn-back hidden" type="button">
+              <span>&lt;</span>
+              previous step 
+            </button>
+            <button id="userCartNext" class="user-cart_next_btn" type="button">
+              Next step <span>&gt;</span>
+            </button>            
+          </div>           
+        </div>        
       </div>
+    </div>
+  </section>
 
-    </section>
+<!-- Section User-cart content End -->
 
+<!-- section Subscribe Start -->
 
+//= template/subscribe.html
 
+<!-- section Subscribe END -->
 
-
-
-
-
-
-      <!-- section Subscribe Start -->
-
-  //= template/subscribe.html
+<!-- Footer Start -->
 
   //= template/footer.html
 
-    <a href="#up" class="page-up">
-      <svg class="page-up_icon">
-        <use xlink:href="#arrow-up_icon"></use>
-      </svg>
-    </a>
+<!-- Footer END -->
+
+<!-- Page Up button -->
+
+  <a href="#up" class="page-up">
+    <svg class="page-up_icon">
+      <use xlink:href="#arrow-up_icon"></use>
+    </svg>
+  </a>
 
   <script src="js/user-cart.js"></script>
   

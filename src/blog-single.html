@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/blog-single.css">
+  <title>Blog</title>
+</head>
+<body>
+  <!-- SVG sprites START -->
+
+
+
+  //= template/sprite.html
+
+
+  
+
+  <!-- SVG sprites END -->
+      
+      
+      
+    <header id="up">
+            //= template/header.html
+    </header>
+        
+  <!-- title Start -->
+        
+    <section class="blogs">
+      <div class="blogs_wrapper">
+        <h1 class="blogs_title">our blog</h1>
+        <div class="blogs_subtitle">
+          <a href="index.html" class="blogs_links">Home <span>></span></a>
+          <a href="#" class="head_links">Blog</a>
+        </div>
+      </div>
+    </section>
+      
+  <!-- title End -->
+
+  <!-- Blog Content Started -->
+  
+  <section class="content">
+    <div class="container">
+      <div class="content_wrapper">
+        <span class="content_category">Category</span>
+        <h2 class="content_title">In interdum turpis tellus, <br> tempus mollis lorem volutpat nec</h2>
+        <div class="content_block">
+          <p class="content_comments">
+            <svg class="content_comments_icon">
+              <use xlink:href="#live-chat_icon"></use>
+            </svg>
+            Comments: <span>5</span>
+          </p>
+          <p class="content_date">
+            <svg class="content_date_icon">
+              <use xlink:href="#clock_icon"></use>
+            </svg>
+            Date: <span>25 sep 2016</span>
+          </p>
+        </div>
+        <div class="content_share">
+          <svg class="content_share_icon">
+            <use xlink:href="#share_icon"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Content End -->
+        
+
+<!-- section Subscribe Start -->
+
+  //= template/subscribe.html
+
+<!-- section Subscribe END -->
+
+<!-- Footer Start -->
+
+  //= template/footer.html
+
+<!-- Footer END -->
+
+<!-- Page UP button-->
+      
+  <a href="#up" class="page-up">
+    <svg class="page-up_icon">
+      <use xlink:href="#arrow-up_icon"></use>
+    </svg>
+  </a>      
+  
+  <script src="js/lib/jquery-3.4.1.min.js"></script>
+  <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/lib/wow.min.js"></script>
+  <script src="js/blog-single.js"></script>
+  
+</body>
+</html>

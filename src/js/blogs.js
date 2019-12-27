@@ -8,6 +8,16 @@
 $(document).ready(function() {
   //= partials/header.js
 
+  // blogs handler
+
+  $("#blogsContainer")
+    .children()
+    .each(function() {
+      $(this).on("click", function() {
+        $(location).attr("href", "blog-single.html");
+      });
+    });
+
   // chosen dropdown
 
   $("#category").chosen({

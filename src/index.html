@@ -8,7 +8,7 @@
   <title>Agora</title>  
 </head>
 <body>
-  <!-- SVG sprites START -->
+<!-- SVG sprites START -->
 
 
 
@@ -17,7 +17,7 @@
 
   
 
-  <!-- SVG sprites END -->
+<!-- SVG sprites END -->
 
 
 
@@ -28,15 +28,17 @@
     //= template/header.html
   </header>
 
-<!-- promo section -->
+<!-- Section Promo Start -->
 
   <section class="promo">
     <div class="container">
       //= template/slick.html
     </div>
   </section>
+
+<!-- Section Promo End -->
   
-<!-- features section -->
+<!-- Section Features Start-->
 
   <section class="features">
     <h2 class="hidden">Features</h2>
@@ -88,9 +90,9 @@
     </div>
   </section>
 
-  <!-- End -->
+<!-- Section Features End-->
 
-<!-- section deal 0f day -->
+<!-- Section deal 0f day Start -->
 
   <section class="products">
     <h2 class="hidden">products</h2>
@@ -131,9 +133,9 @@
         </div>
     </div>
 
-    <!-- End -->
+<!-- Section deal 0f day End -->
 
-    <!-- Products -->
+<!-- Section Products Start, used render.js -->
 
     <div class="container">
       <div id="render-product" class="grid-375">
@@ -155,17 +157,20 @@
     </div>
   </section>
 
-<!-- button LOAD MORE -->    
-    <div class="container">
-      <button id="load-more" class="load_more" type="button">        
-          <svg class="load_more_icon">
-            <use xlink:href="#load_icon"></use>
-          </svg>
-        Load more
-      </button>
-    </div>
+<!-- Section Products End -->
 
-<!-- twits & facebook reviews -->
+<!-- button LOAD MORE --> 
+
+  <div class="container">
+    <button id="load-more" class="load_more" type="button">        
+        <svg class="load_more_icon">
+          <use xlink:href="#load_icon"></use>
+        </svg>
+      Load more
+    </button>
+  </div>
+
+<!-- Section twits & facebook reviews Start -->
 
   <section class="reviews"> 
     <h2 class="hidden">reviews</h2>       
@@ -218,9 +223,9 @@
           </div>
         </div>
 
-        <!-- End -->
+<!-- reviews_carousel END -->
 
-        <!--  continue reviews -->
+<!-- Continue reviews section -->
 
         <div class="grid-375_wrapper">
           <div class="reviews_wrapper">
@@ -251,7 +256,7 @@
         <div class="grid-375_wrapper"><div class="grid-empty"></div> </div>
       </div>
 
-      <!-- more some rewies in grid-250 Start -->
+<!-- more some rewies in grid-250 Start -->
 
       <div class="grid-250">
         <div class="grid-250_wrapper">
@@ -277,9 +282,9 @@
     </div> 
   </section>
 
-  <!-- rewies End -->
+<!-- Section Rewies End -->
 
-  <!-- section awards Start -->
+<!-- Section Awards Start -->
 
   <section class="awards">
     <h2 class="hidden">awards</h2>
@@ -325,13 +330,21 @@
     </div>
   </section>
 
-  <!-- awards End-->
+<!-- Section Awards END -->
 
-  //= template/subscribe.html
+<!-- section Subscribe Start -->
+
+//= template/subscribe.html
+
+<!-- section Subscribe END -->
+
+<!-- Footer Start -->
 
   //= template/footer.html
 
-  <!-- Page UP button-->
+<!-- Footer END -->
+
+<!-- Page UP button-->
 
   <a href="#up" class="page-up">
     <svg class="page-up_icon">

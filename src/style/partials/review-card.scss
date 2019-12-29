@@ -60,7 +60,7 @@
   &_like {
     margin-top: 24px;
     &_btn {
-      background-color: #f7f7f7;
+      background-color: inherit;
       border: none;
       cursor: pointer;
       outline: none;
@@ -89,7 +89,7 @@
     }
   }
   &_dislike_btn {
-    background-color: #f7f7f7;
+    background-color: inherit;
     border: none;
     cursor: pointer;
     &:disabled {

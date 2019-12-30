@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/catalog-list.css">
+  <title>Catalog</title>
+</head>
+<body>
+<!-- SVG sprites START -->
+
+
+
+  //= template/sprite.html
+
+
+  
+
+<!-- SVG sprites END -->
+      
+      
+      
+  <header id="up">
+          //= template/header.html
+  </header>
+        
+<!-- title Start -->
+        
+  <section class="catalog">
+    <div class="catalog_wrapper">
+      <h1 class="catalog_title">MEN'S LIFESTYLE SHOES</h1>
+      <div class="catalog_subtitle">
+        <a href="index.html" class="catalog_links">Home <span>></span></a>
+        <a href="catalog-slider.html" class="catalog_links">Catalog <span>></span></a>
+        <a href="catalog-slider.html" class="catalog_links">Men <span>></span></a>
+        <a href="#" class="head_links">Shoes</a>
+      </div>
+    </div>
+  </section>
+      
+<!-- title End -->
+
+<!-- section Filter Start -->
+
+<section class="filter">
+  <h2 class="hidden">Catalog with filters</h2>
+  <div class="container">
+    <div class="filter_box-shadow">
+      <div class="filter_flex">
+        <div class="filter_preview-new">
+          <span class="filter_preview-new_span">new</span>
+          <h2 class="filter_preview-new_title">Mountain bike</h2>
+          <h3 class="filter_preview-new_subtitle">Trek Speed Concept</h3>
+          <a href="product.html" class="filter_preview-new_more">More Info</a>
+        </div>
+        <div class="filter_preview-sale">
+          <span class="filter_preview-sale_span">sale</span>
+          <h2 class="filter_preview-sale_title">Down jacket</h2>
+          <h3 class="filter_preview-sale_subtitle">Sale Collection 
+            2015t</h3>
+          <a href="product.html" class="filter_preview-sale_more">More Info</a>
+        </div>
+      </div>
+
+<!-- filter horizontal menu start -->
+
+      <div class="filter_flex">
+        <button type="button" class="filter_btn">
+          Filter
+          <span class="filter_btn_span">
+            <svg class="filter_btn_span_icon">
+              <use xlink:href="#load_icon"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="select_wrapper">
+          <select class="filter_sort" name="sort" id="sort">
+            <option value="price">SORT BY: Price $$$$</option>
+            <option value="sale">SORT BY: sale %</option>
+            <option value="date">SORT BY: date</option>
+            <option value="brand">SORT BY: brands</option>
+            <option value="Clothing">SORT BY:</option>
+          </select>
+        </div>
+        <div class="select_wrapper">
+          <select class="filter_show" name="show" id="show">
+            <option value="8">Show:  8</option>
+            <option value="12">Show:  12</option>
+            <option value="16">Show:  16</option>
+            <option value="20">Show:  20</option>
+          </select>
+        </div>
+        <button type="button" class="filter_view-grid">
+          <svg class="filter_view-grid_icon">
+            <use xlink:href="#grid_icon"></use>
+          </svg>
+        </button>
+        <button type="button" class="filter_view-list">
+          <svg class="filter_view-list_icon">
+            <use xlink:href="#list_icon"></use>
+          </svg>
+        </button>
+        <a href="compare.html" class="filter_compare">compare: <span>3</span></a>
+      </div>
+
+<!-- filter horizontal menu End -->
+
+<!-- filter vertical menu Start -->
+
+      <div class="filter_flex">
+        <ul id="filterVerticalMenu" class="filter_menu">
+          <li class="filter_menu_categories main-li">
+            <div class="filter_flex_center">
+              <div class="filter_flex_center">
+                <svg class="filter_menu_icon">
+                  <use xlink:href="#arrow_right_slider"></use>
+                </svg>
+                categories
+              </div>
+              <span class="filter_menu_close">&times;</span>
+            </div>
+            <ul id="filterMenuCategories" class="filter_menu_categories_list hidden-ul">
+              <li tabindex="0" class="filter_flex_center">Lifestyle <span>1</span> </li class="filter_flex_center">
+              <li tabindex="0" class="filter_flex_center">Running <span>23</span> </li>
+              <li tabindex="0" class="filter_flex_center">Training & Gym <span>45</span> </li>
+              <li tabindex="0" class="filter_flex_center">Basketball <span>11</span> </li>
+              <li tabindex="0" class="filter_flex_center">Footbal <span>15</span> </li>
+              <li tabindex="0" class="filter_flex_center">Soccer <span>32</span> </li>
+              <li tabindex="0" class="filter_flex_center">Baseball <span>8</span> </li>
+              <li tabindex="0" class="filter_flex_center">Golf <span>15</span> </li>
+              <li tabindex="0" class="filter_flex_center">Skateboarding <span>22</span> </li>
+            </ul>
+          </li>
+          <li class="filter_menu_brands main-li">
+            <div class="filter_flex_center">
+              <div class="filter_flex_center">
+                <svg class="filter_menu_icon">
+                  <use xlink:href="#arrow_right_slider"></use>
+                </svg>
+                brands
+              </div>
+              <span class="filter_menu_close">&times;</span>
+            </div>
+            <ul class="filter_menu_brands_list hidden-ul">
+              <li>
+                <form class="filter_menu_brands_form" id="filterMenuBrands" action="#" method="post">
+                  <label class="filter_flex_center brand-label" for="lifestyle">
+                    <input type="checkbox" name="lifestyle" id="lifestyle">
+                    <div class="label-text">Lifestyle</div>         
+                  </label>
+                  <label class="filter_flex_center brand-label" for="running">
+                    <input type="checkbox" name="running" id="running">
+                    <div class="label-text">Running</div>         
+                  </label>
+                  <label class="filter_flex_center brand-label" for="training">
+                    <input type="checkbox" name="training" id="training">
+                    <div class="label-text">Training</div>         
+                  </label>
+                  <label class="filter_flex_center brand-label" for="basketball">
+                    <input type="checkbox" name="basketball" id="basketball">
+                    <div class="label-text">Basketball</div>         
+                  </label>                
+                </form>
+              </li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="filter_content"></div>
+      </div>
+
+<!-- filter vertical menu End -->
+
+    </div>
+  </div>  
+</section>
+  
+
+<!-- section Subscribe Start -->
+
+  //= template/subscribe.html
+
+<!-- section Subscribe END -->
+
+<!-- Footer Start -->
+
+  //= template/footer.html
+
+<!-- Footer END -->  
+  
+  <script src="js/lib/jquery-3.4.1.min.js"></script>
+  <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/lib/wow.min.js"></script>
+  <script src="js/lib/chosen.jquery.min.js"></script>
+  <script src="js/catalog-list.js"></script>
+</body>
+</html>

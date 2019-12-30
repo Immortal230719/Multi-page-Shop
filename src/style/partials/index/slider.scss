@@ -114,6 +114,9 @@
     color: #ffffff;
   }
   &_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 25px;
     left: 25px;

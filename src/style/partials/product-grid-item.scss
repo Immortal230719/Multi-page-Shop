@@ -1,0 +1,143 @@
+.product-375 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 49px;
+  overflow: hidden;
+  box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  cursor: pointer;
+  &_hover-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $main-color2;
+    z-index: 0;
+    opacity: 0;
+    &_active {
+      opacity: 0.9;
+    }
+  }
+  &_category {
+    font-family: "Poppins";
+    position: absolute;
+    top: 60px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    line-height: 12px;
+    color: #ffffff;
+    z-index: 1;
+  }
+  &_flex {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &_buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 35px;
+    width: 130px;
+    height: 50px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border-radius: 30px;
+    font-family: "Poppins";
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #111111;
+    cursor: pointer;
+    &_icon {
+      width: 17px;
+      height: 18px;
+      fill: #111111;
+      margin-right: 10px;
+    }
+  }
+  &_copy {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1),
+      inset 0px 1px 0 0 rgba(255, 255, 255, 0.1);
+    background-color: #266ff7;
+    border-radius: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+    &_icon {
+      position: relative;
+      top: 2px;
+      width: 16px;
+      height: 18px;
+      fill: #ffffff;
+    }
+  }
+  &_like {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1),
+      inset 0px 1px 0 0 rgba(255, 255, 255, 0.1);
+    background-color: #266ff7;
+    border-radius: 100%;
+    cursor: pointer;
+    &_icon {
+      position: relative;
+      top: 2px;
+      width: 16px;
+      height: 18px;
+      fill: #ffffff;
+      stroke: rgb(255, 255, 255);
+      stroke-width: 10px;
+    }
+  }
+  &_sale {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #111111;
+    border-radius: 3px;
+    font-family: "Poppins";
+    font-size: 11px;
+    color: #ffffff;
+  }
+  &_img {
+    width: 275px;
+    height: 205px;
+    background: rgb(70, 69, 69);
+    z-index: -1;
+  }
+  &_name {
+    position: relative;
+    margin-top: 25px;
+    font-family: "Oswald";
+    font-size: 17px;
+    color: #111111;
+    z-index: 1;
+    &_hover {
+      color: #fff;
+    }
+  }
+  &_price {
+    position: relative;
+    margin-top: 8px;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    color: #2344e8;
+    z-index: 1;
+    &_hover {
+      color: #fff;
+    }
+  }
+}

@@ -40,7 +40,7 @@ $(document).ready(function() {
   const items = $("#blogsContainer > div");
 
   const numItems = items.length;
-  const perPage = 9;
+  const perPage = ;
 
   // Only show the first 2 (or first `per_page`) items initially.
   items.slice(perPage).hide();

@@ -1,3 +1,12 @@
+//= lib/jquery-3.4.1.min.js
+//= lib/jquery-migrate-1.2.1.min.js
+//= lib/jQueryUI.min.js
+//= lib/jQueryUITouchPounch.js
+//= lib/slick.min.js
+//= lib/wow.min.js
+//= lib/jquery.simplePagination.js
+//= lib/chosen.jquery.min.js
+
 $(document).ready(function() {
   //= partials/header.js
 
@@ -43,40 +52,79 @@ $(document).ready(function() {
       });
     });
 
-  // // pagination navigation menu
+  // range Input
 
-  // // Consider adding an ID to your table
-  // // incase a second table ever enters the picture.
-  // const items = $("#blogsContainer > div");
+  $("#rangeInput").slider({
+    animate: "fast",
+    range: true,
+    values: [50, 1500],
+    min: 0,
+    max: 3000,
+    change: function() {
+      let rangeValues = $("#rangeInput").slider("values");
+      $("#priceMin").text("$" + rangeValues[0].toString());
+      $("#priceMax").text("$" + rangeValues[1].toString());
+    }
+  });
 
-  // const numItems = items.length;
-  // const perPage = 9;
+  // mouseOver events
 
-  // // Only show the first 2 (or first `per_page`) items initially.
-  // items.slice(perPage).hide();
+  $("#productItemBox")
+    .children()
+    .each(function(index, e) {
+      $(e).hover(function() {
+        $(this)
+          .find(".product-375_hover-bg")
+          .toggleClass("product-375_hover-bg_active");
+        $(this)
+          .find(".product-375_category")
+          .toggleClass("hidden_active");
+        $(this)
+          .find(".product-375_flex")
+          .toggleClass("hidden_flex");
+        $(this)
+          .find(".product-375_price")
+          .toggleClass("product-375_price_hover");
+        $(this)
+          .find(".product-375_name")
+          .toggleClass("product-375_name_hover");
+      });
+    });
 
-  // // Now setup the pagination using the `.pagination-page` div.
-  // $("#blogsItemWrapper").pagination({
-  //   items: numItems,
-  //   itemsOnPage: perPage,
-  //   cssStyle: "light-theme",
-  //   prevText: "&lt",
-  //   nextText: "&gt",
+  // pagination navigation menu
 
-  //   // This is the actual page changing functionality.
-  //   onPageClick: function(pageNumber) {
-  //     // We need to show and hide `tr`s appropriately.
-  //     let showFrom = perPage * (pageNumber - 1);
-  //     let showTo = showFrom + perPage;
+  // Consider adding an ID to your table
+  // incase a second table ever enters the picture.
+  const items = $("#productItemBox > div");
 
-  //     // We'll first hide everything...
-  //     items
-  //       .hide()
-  //       // ... and then only show the appropriate rows.
-  //       .slice(showFrom, showTo)
-  //       .show();
-  //   }
-  // });
+  const numItems = items.length;
+  const perPage = 12;
 
-  // reviews_carousel
+  // Only show the first 2 (or first `per_page`) items initially.
+  items.slice(perPage).hide();
+
+  // Now setup the pagination using the `.pagination-page` div.
+  $("#blogsItemWrapper").pagination({
+    items: numItems,
+    itemsOnPage: perPage,
+    cssStyle: "light-theme",
+    prevText: "&lt",
+    nextText: "&gt",
+
+    // This is the actual page changing functionality.
+    onPageClick: function(pageNumber) {
+      // We need to show and hide `tr`s appropriately.
+      let showFrom = perPage * (pageNumber - 1);
+      let showTo = showFrom + perPage;
+
+      // We'll first hide everything...
+      items
+        .hide()
+        // ... and then only show the appropriate rows.
+        .slice(showFrom, showTo)
+        .show();
+    }
+  });
+
+  reviews_carousel;
 });

@@ -132,6 +132,26 @@
               <li tabindex="0" class="filter_flex_center">Skateboarding <span>22</span> </li>
             </ul>
           </li>
+          <li class="filter_menu_price main-li">
+            <div class="filter_flex_center">
+              <div class="filter_flex_center">
+                <svg class="filter_menu_icon">
+                  <use xlink:href="#arrow_right_slider"></use>
+                </svg>
+                price
+              </div>
+              <span class="filter_menu_close">&times;</span>
+            </div>
+            <ul class="filter_menu_price_list hidden-ul">
+              <li>
+                <div class="filter_flex">
+                  <span id="priceMin" class="filter_menu_price_min">$50</span>
+                  <span id="priceMax" class="filter_menu_price_max">$1500</span>
+                </div>
+                <div id="rangeInput" class="filter_menu_price_range"></div>
+              </li>
+            </ul>
+          </li>
           <li class="filter_menu_brands main-li">
             <div class="filter_flex_center">
               <div class="filter_flex_center">
@@ -164,17 +184,313 @@
                 </form>
               </li>
             </ul>
+          </li>          
+          <li class="filter_menu_colors main-li">
+            <div class="filter_flex_center">
+              <div class="filter_flex_center">
+                <svg class="filter_menu_icon">
+                  <use xlink:href="#arrow_right_slider"></use>
+                </svg>
+                color
+              </div>
+              <span class="filter_menu_close">&times;</span>
+            </div>
+            <ul class="filter_menu_colors_list hidden-ul">
+              <li>
+                <form class="filter_menu_colors_list_form" id="filterMenuColor" action="#" method="post">
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_white_input" type="checkbox" value="white" name="white" id="colorWhite">
+                    <div class="filter_menu_colors_white"></div>     
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_grey_input" type="checkbox" value="grey" name="grey" id="colorGrey">
+                    <div class="filter_menu_colors_grey"></div>     
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_yellow_input" type="checkbox" value="yellow" name="yellow" id="colorYellow">
+                    <div class="filter_menu_colors_yellow"></div>    
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_orange_input" type="checkbox" value="orange" name="orange" id="colorOrange">
+                    <div class="filter_menu_colors_orange"></div>    
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_red_input" type="checkbox" value="red" name="red" id="colorRed">
+                    <div class="filter_menu_colors_red"></div>    
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_purple_input" type="checkbox" value="purple" name="purple" id="colorPurple">
+                    <div class="filter_menu_colors_purple"></div>    
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_darkblue_input" type="checkbox" value="darkblue" name="darkblue" id="colorDarkblue">
+                    <div class="filter_menu_colors_darkblue"></div>  
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_blue_input" type="checkbox" value="blue" name="blue" id="colorBlue">
+                    <div class="filter_menu_colors_blue"></div>  
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_green_input" type="checkbox" value="green" name="green" id="colorGreen">
+                    <div class="filter_menu_colors_green"></div>  
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_brown_input" type="checkbox" value="brown" name="brown" id="colorBrown">
+                    <div class="filter_menu_colors_brown"></div>  
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_black_input" type="checkbox" value="black" name="black" id="colorBlack">
+                    <div class="filter_menu_colors_black"></div>  
+                  </label>
+                  <label class="filter_flex_center">
+                    <input class="filter_menu_colors_gradient_input" type="checkbox" value="gradient" name="gradient" id="colorGradient">
+                    <div class="filter_menu_colors_gradient"></div>  
+                  </label>       
+                </form>
+              </li>
+            </ul>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li class="filter_menu_size main-li">
+            <div class="filter_flex_center">
+              <div class="filter_flex_center">
+                <svg class="filter_menu_icon">
+                  <use xlink:href="#arrow_right_slider"></use>
+                </svg>
+                size
+              </div>
+              <span class="filter_menu_close">&times;</span>
+            </div>
+            <ul class="filter_menu_size_list hidden-ul">
+              <li>
+                <div class="grid-51">
+                  <div tabindex="0" class="grid-51_wrapper">4</div tabindex="0">
+                  <div tabindex="0" class="grid-51_wrapper">4.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">5</div>
+                  <div tabindex="0" class="grid-51_wrapper">5.5</div tabindex="0">
+                  <div tabindex="0" class="grid-51_wrapper">6</div>
+                  <div tabindex="0" class="grid-51_wrapper">6.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">7</div>
+                  <div tabindex="0" class="grid-51_wrapper">7.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">8</div>
+                  <div tabindex="0" class="grid-51_wrapper">8.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">9</div>
+                  <div tabindex="0" class="grid-51_wrapper">9.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">10</div>
+                  <div tabindex="0" class="grid-51_wrapper">10.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">11</div>
+                  <div tabindex="0" class="grid-51_wrapper">11.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">12</div>
+                  <div tabindex="0" class="grid-51_wrapper">12.5</div tabindex="0">
+                  <div tabindex="0" class="grid-51_wrapper">13</div>
+                  <div tabindex="0" class="grid-51_wrapper">13.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">14</div>
+                  <div tabindex="0" class="grid-51_wrapper">14.5</div>
+                  <div tabindex="0" class="grid-51_wrapper">15</div>
+                  <div tabindex="0" class="grid-51_wrapper">16</div>
+                  <div tabindex="0" class="grid-51_wrapper">17</div>
+                  <div tabindex="0" class="grid-51_wrapper">18</div>
+                  <div tabindex="0" class="grid-51_wrapper">19</div>
+                </div>
+              </li>
+            </ul>
+          </li>
         </ul>
-        <div class="filter_content"></div>
-      </div>
 
-<!-- filter vertical menu End -->
+<!-- filter vertical menu End --> 
 
+<!-- grid with items Start -->
+
+        <div class="block">
+          <div id="productItemBox" class="grid-375">
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>
+            <div class="grid-375_wrapper">
+              //= template/product-grid-item.html
+            </div>                        
+          </div>
+        </div>        
+      </div>      
     </div>
+
+<!-- grid with items Start -->
+
+<!-- pagination Start -->
+
+    <div id="blogsItemWrapper" class="pagination-menu"></div>
+
+<!-- pagination Start -->
   </div>  
 </section>
   
@@ -191,10 +507,6 @@
 
 <!-- Footer END -->  
   
-  <script src="js/lib/jquery-3.4.1.min.js"></script>
-  <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
-  <script src="js/lib/wow.min.js"></script>
-  <script src="js/lib/chosen.jquery.min.js"></script>
   <script src="js/catalog-list.js"></script>
 </body>
 </html>

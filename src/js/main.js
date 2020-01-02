@@ -3,6 +3,7 @@
 //= lib/slick.min.js
 //= lib/wow.min.js
 //= lib/products.js
+//= lib/SmoothScroll.js
 
 $(document).ready(function() {
   //tabs init

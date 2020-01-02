@@ -5,8 +5,23 @@
   background-color: #fff;
   padding: 49px;
   overflow: hidden;
-  box-shadow: inset -1px -1px 0 0 #e6e6e6;
+  box-shadow: inset 1px -1px 0 0 #e6e6e6;
   cursor: pointer;
+  &:hover {
+    .product-375_name,
+    .product-375_price {
+      color: #fff;
+    }
+    .product-375_hover-bg {
+      opacity: 0.9;
+    }
+    .product-375_category {
+      opacity: 1;
+    }
+    .product-375_flex {
+      opacity: 1;
+    }
+  }
   &_hover-bg {
     height: 100%;
     width: 100%;
@@ -16,9 +31,6 @@
     background-color: $main-color2;
     z-index: 0;
     opacity: 0;
-    &_active {
-      opacity: 0.9;
-    }
   }
   &_category {
     font-family: "Poppins";
@@ -30,12 +42,14 @@
     line-height: 12px;
     color: #ffffff;
     z-index: 1;
+    opacity: 0;
   }
   &_flex {
     display: flex;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
   }
   &_buy {
     display: flex;
@@ -124,20 +138,14 @@
     font-size: 17px;
     color: #111111;
     z-index: 1;
-    &_hover {
-      color: #fff;
-    }
   }
   &_price {
     position: relative;
     margin-top: 8px;
     font-family: "Poppins";
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     color: #2344e8;
     z-index: 1;
-    &_hover {
-      color: #fff;
-    }
   }
 }

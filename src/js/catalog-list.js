@@ -6,9 +6,47 @@
 //= lib/wow.min.js
 //= lib/jquery.simplePagination.js
 //= lib/chosen.jquery.min.js
+//= lib/SmoothScroll.js
 
 $(document).ready(function() {
   //= partials/header.js
+
+  // pagination navigation menu
+
+  // Consider adding an ID to your table
+  // incase a second table ever enters the picture.
+  let items = $("#productItemBox > div");
+
+  const numItems = items.length;
+  let perPage = 12;
+  let showFrom = 0;
+  let showTo = 0;
+
+  // Only show the first 2 (or first `per_page`) items initially.
+  items.slice(perPage).hide();
+
+  // Now setup the pagination using the `.pagination-page` div.
+  $("#blogsItemWrapper").pagination({
+    items: numItems,
+    itemsOnPage: perPage,
+    cssStyle: "light-theme",
+    prevText: "&lt",
+    nextText: "&gt",
+
+    // This is the actual page changing functionality.
+    onPageClick: function(pageNumber) {
+      // We need to show and hide `tr`s appropriately.
+      showFrom = perPage * (pageNumber - 1);
+      showTo = showFrom + perPage;
+
+      // We'll first hide everything...
+      items
+        .hide()
+        // ... and then only show the appropriate rows.
+        .slice(showFrom, showTo)
+        .show();
+    }
+  });
 
   // chosen dropdown
 
@@ -67,64 +105,117 @@ $(document).ready(function() {
     }
   });
 
-  // mouseOver events
+  // button of product's view
 
-  $("#productItemBox")
-    .children()
-    .each(function(index, e) {
-      $(e).hover(function() {
-        $(this)
-          .find(".product-375_hover-bg")
-          .toggleClass("product-375_hover-bg_active");
-        $(this)
-          .find(".product-375_category")
-          .toggleClass("hidden_active");
-        $(this)
-          .find(".product-375_flex")
-          .toggleClass("hidden_flex");
-        $(this)
-          .find(".product-375_price")
-          .toggleClass("product-375_price_hover");
-        $(this)
-          .find(".product-375_name")
-          .toggleClass("product-375_name_hover");
+  const box = $("#productItemBox");
+
+  $("#viewGrid").on("click", function() {
+    perPage = 12;
+    box.removeClass("grid-fr");
+    $(this).addClass("filter_view-grid_active");
+    $("#viewList").removeClass("filter_view-list_active");
+    box.children().each(function(index, e) {
+      $(e).unbind("mouseenter mouseleave");
+    });
+
+    box.children().each(function(index, e) {
+      $(e)
+        .children()
+        .removeClass("product-li");
+      let childrenLi = $(e)
+        .children()
+        .find("*");
+      childrenLi.each(function(index, e) {
+        if ($(e).attr("class") && e.tagName !== "svg") {
+          let className = $(e)
+            .attr("class")
+            .split("_");
+          $(e).removeClass("product-li_" + className[1]);
+        }
+        if (e.tagName === "svg") {
+          let className = $(e)
+            .attr("class")
+            .split("_");
+          $(e).removeClass("product-li_" + className[1] + "_icon");
+        }
       });
     });
 
-  // pagination navigation menu
+    let numOfPage = $("#blogsItemWrapper")
+      .find(".current")
+      .text();
 
-  // Consider adding an ID to your table
-  // incase a second table ever enters the picture.
-  const items = $("#productItemBox > div");
+    let numofItemHide = parseInt(numOfPage) * perPage - perPage;
 
-  const numItems = items.length;
-  const perPage = 12;
+    items
+      .hide()
+      .slice(numofItemHide, numofItemHide + perPage)
+      .show();
 
-  // Only show the first 2 (or first `per_page`) items initially.
-  items.slice(perPage).hide();
-
-  // Now setup the pagination using the `.pagination-page` div.
-  $("#blogsItemWrapper").pagination({
-    items: numItems,
-    itemsOnPage: perPage,
-    cssStyle: "light-theme",
-    prevText: "&lt",
-    nextText: "&gt",
-
-    // This is the actual page changing functionality.
-    onPageClick: function(pageNumber) {
-      // We need to show and hide `tr`s appropriately.
-      let showFrom = perPage * (pageNumber - 1);
-      let showTo = showFrom + perPage;
-
-      // We'll first hide everything...
-      items
-        .hide()
-        // ... and then only show the appropriate rows.
-        .slice(showFrom, showTo)
-        .show();
-    }
+    hoverItem();
   });
 
-  reviews_carousel;
+  $("#viewList").on("click", function() {
+    perPage = 11;
+    $(this).addClass("filter_view-list_active");
+    $("#viewGrid").removeClass("filter_view-grid_active");
+    box.addClass("grid-fr");
+
+    // remove hover effect on grid elements
+    box.children().each(function(index, e) {
+      $(e).unbind("mouseenter mouseleave");
+    });
+
+    // add class for each children gridBox
+
+    box.children().each(function(index, e) {
+      $(e)
+        .children()
+        .addClass("product-li");
+      let childrenLi = $(e)
+        .children()
+        .find("*");
+      childrenLi.each(function(index, e) {
+        if ($(e).attr("class") && e.tagName !== "svg") {
+          let className = $(e)
+            .attr("class")
+            .split("_");
+          $(e).addClass("product-li_" + className[1]);
+        }
+        if (e.tagName === "svg") {
+          let className = $(e)
+            .attr("class")
+            .split("_");
+          $(e).addClass("product-li_" + className[1] + "_icon");
+        }
+      });
+    });
+
+    let numOfPage = $("#blogsItemWrapper")
+      .find(".current")
+      .text();
+
+    let numofItemHide = parseInt(numOfPage) * perPage - perPage;
+
+    items
+      .hide()
+      .slice(numofItemHide, numofItemHide + perPage)
+      .show();
+  });
+
+  // mouseOver events
+
+  function hoverItem() {
+    $("#productItemBox")
+      .children()
+      .each(function(index, e) {
+        $(e).on("click", function() {
+          $(location).attr("href", "product.html");
+        });
+      });
+  }
+
+  // initialize hover effect
+
+  hoverItem();
 });

@@ -1,3 +1,5 @@
+//= lib/SmoothScroll.js
+
 $(document).ready(function() {
   //= partials/header.js
 

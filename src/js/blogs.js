@@ -4,6 +4,7 @@
 //= lib/wow.min.js
 //= lib/chosen.jquery.min.js
 //= lib/jquery.simplePagination.js
+//= lib/SmoothScroll.js
 
 $(document).ready(function() {
   //= partials/header.js
@@ -40,7 +41,7 @@ $(document).ready(function() {
   const items = $("#blogsContainer > div");
 
   const numItems = items.length;
-  const perPage = ;
+  const perPage = 9;
 
   // Only show the first 2 (or first `per_page`) items initially.
   items.slice(perPage).hide();

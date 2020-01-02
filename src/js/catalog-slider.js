@@ -2,6 +2,7 @@
 //= lib/jquery-migrate-1.2.1.min.js
 //= lib/slick.min.js
 //= lib/wow.min.js
+//= lib/SmoothScroll.js
 
 $(document).ready(function() {
   //tabs init

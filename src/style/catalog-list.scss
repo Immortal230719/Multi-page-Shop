@@ -464,7 +464,7 @@ $menu-link-color: #ffffff;
               width: 0;
               margin: 0;
             }
-            div {
+            span {
               position: relative;
               width: 30px;
               height: 30px;
@@ -489,12 +489,12 @@ $menu-link-color: #ffffff;
               }
             }
             &:nth-child(6) {
-              div {
+              span {
                 margin: 0;
               }
             }
             &:nth-child(12) {
-              div {
+              span {
                 margin-right: 0;
               }
             }

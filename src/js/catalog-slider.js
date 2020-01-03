@@ -1,7 +1,6 @@
 //= lib/jquery-3.4.1.min.js
 //= lib/jquery-migrate-1.2.1.min.js
 //= lib/slick.min.js
-//= lib/wow.min.js
 //= lib/SmoothScroll.js
 
 $(document).ready(function() {
@@ -9,7 +8,6 @@ $(document).ready(function() {
   //= partials/header.js
 
   $("#tabList").click(function(event) {
-    console.log(event.target.id);
     $(event.target)
       .addClass("catalog-tabs_btn_active")
       .siblings()
@@ -76,12 +74,4 @@ $(document).ready(function() {
       $(".page-up").fadeOut();
     }
   });
-
-  $("a[href='#up']").click(function() {
-    const _href = $(this).attr("href");
-    $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-    return false;
-  });
-
-  new WOW().init();
 });

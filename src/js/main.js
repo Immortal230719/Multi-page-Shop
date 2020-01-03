@@ -4,6 +4,7 @@
 //= lib/wow.min.js
 //= lib/products.js
 //= lib/SmoothScroll.js
+//= lib/jquery.countdown-timer.js
 
 $(document).ready(function() {
   //tabs init
@@ -108,4 +109,10 @@ $(document).ready(function() {
   new WOW().init();
 });
 
-//= partials/render.js
+// timer
+
+let time = new Date();
+let day = (time.getDate() + 2).toString();
+let month = (time.getMonth() + 1).toString();
+
+$("#timer").countdownTimer("2020/" + month + "/" + day + " 0:00");

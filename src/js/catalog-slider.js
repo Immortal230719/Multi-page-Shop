@@ -4,8 +4,11 @@
 //= lib/SmoothScroll.js
 
 $(document).ready(function() {
-  //tabs init
+  $("#sprite").load("/sprite.html");
+
   //= partials/header.js
+
+  //tabs init
 
   $("#tabList").click(function(event) {
     $(event.target)

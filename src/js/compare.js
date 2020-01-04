@@ -3,5 +3,7 @@
 //= lib/SmoothScroll.js
 
 $(document).ready(function() {
+  $("#sprite").load("/sprite.html");
+
   //= partials/header.js
 });

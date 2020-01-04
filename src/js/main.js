@@ -7,11 +7,13 @@
 //= lib/jquery.countdown-timer.js
 
 $(document).ready(function() {
-  //tabs init
+  $("#sprite").load("/sprite.html");
+
   //= partials/header.js
 
+  //tabs init
+
   $("#tabList").click(function(event) {
-    console.log(event.target.id);
     $(event.target)
       .addClass("catalog-tabs_btn_active")
       .siblings()
@@ -107,6 +109,22 @@ $(document).ready(function() {
   });
 
   new WOW().init();
+
+  // button load more
+
+  $("#load-more").on("click", function() {
+    let renderBox = $("#render-product");
+    for (let index = 0; index < 8; index++) {
+      renderBox.append(
+        $("<div />", {
+          class: "grid-375_wrapper",
+          click: function(e) {
+            $(location).attr("href", "product.html");
+          }
+        }).load("../template/product-grid-item.html")
+      );
+    }
+  });
 });
 
 // timer

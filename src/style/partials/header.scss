@@ -99,6 +99,7 @@
     }
   }
   &_like {
+    position: relative;
     width: 75px;
     &_icon {
       fill: $text-color;
@@ -116,8 +117,8 @@
     }
     &_counter {
       position: absolute;
-      top: 17px;
-      right: 17px;
+      top: 15px;
+      right: 15px;
       display: flex;
       justify-content: center;
       align-items: center;

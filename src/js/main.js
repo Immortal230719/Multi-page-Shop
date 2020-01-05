@@ -8,7 +8,6 @@
 
 $(document).ready(function() {
   $("#sprite").load("/sprite.html");
-
   //= partials/header.js
 
   //tabs init
@@ -39,6 +38,47 @@ $(document).ready(function() {
         break;
       default:
         alert("somthing wrong");
+    }
+  });
+
+  // add product to basket
+
+  $("#render-product").on("click", function(e) {
+    if (
+      e.target.className === "product-375_copy" ||
+      e.target.parentElement.className === "product-375_copy"
+    ) {
+      let numOfItems = cartCase.children().length;
+
+      cartCase.append(
+        $("<div />", {
+          class: "basket-cart_item"
+        }).load("../template/header-basket-item.html")
+      );
+      numOfItems++;
+      basketQuanity.text(numOfItems);
+      basketCounter.text(numOfItems);
+    }
+    if (
+      e.target.className === "product-375_like" ||
+      e.target.parentElement.className === "product-375_like"
+    ) {
+      let numOfItems = likeCase.children().length;
+
+      likeCase.append(
+        $("<div />", {
+          class: "basket-cart_item"
+        }).load("../template/header-basket-item.html")
+      );
+      numOfItems++;
+      likeQuantity.text(numOfItems);
+      likeCounter.text(numOfItems);
+    }
+    if (
+      e.target.className === "product-375_buy" ||
+      e.target.parentElement.className === "product-375_buy"
+    ) {
+      $(location).attr("href", "user-card.html");
     }
   });
 
@@ -117,10 +157,7 @@ $(document).ready(function() {
     for (let index = 0; index < 8; index++) {
       renderBox.append(
         $("<div />", {
-          class: "grid-375_wrapper",
-          click: function(e) {
-            $(location).attr("href", "product.html");
-          }
+          class: "grid-375_wrapper"
         }).load("../template/product-grid-item.html")
       );
     }

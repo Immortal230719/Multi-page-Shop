@@ -6,6 +6,7 @@ const navSearchBtn = $("#headerSearchBtn");
 const searchClose = $("#searchCloseBtn");
 const basketCartBtn = $("#headerBasket");
 const navSelectBtn = $("#headerSelect");
+const likeCaseBtn = $("#headerLike");
 
 //hidden forms
 const signForm = $("#signForm");
@@ -13,12 +14,16 @@ const searchForm = $("#searching");
 const basketCart = $("#basketCart");
 const menu = $("#fullMenu");
 const animateSpan = $("#menuAnimateSpan");
+const likeCart = $("#likeCart");
 
 // interactive changing elements
 
 const basketQuanity = $("#basketCartCounter");
+const likeQuantity = $("#likeCaseCounter");
 const cartCase = $("#cartCase");
+const likeCase = $("#likeCase");
 const basketCounter = $("#headerBasketCounter");
+const likeCounter = $("#likeCounter");
 
 // events
 
@@ -26,12 +31,22 @@ const basketCounter = $("#headerBasketCounter");
 navLoginBtn.on("click", function() {
   //delete open elements
   basketCart.parent().fadeOut();
+  likeCart.parent().fadeOut();
   // open needed element
   signForm.parent().fadeToggle();
 });
 
+//show likeCase
+
+likeCaseBtn.on("click", function() {
+  basketCart.parent().fadeOut();
+  signForm.parent().fadeOut();
+  likeCart.parent().fadeToggle();
+});
+
 //show Search Form
 navSearchBtn.on("click", function() {
+  likeCart.parent().fadeOut();
   basketCart.parent().fadeOut();
   signForm.parent().fadeOut();
   searchForm.parent().toggleClass("over-flow_animate");
@@ -44,6 +59,7 @@ searchClose.on("click", function() {
 
 // show hidden Basket
 basketCartBtn.on("click", function() {
+  likeCart.parent().fadeOut();
   signForm.parent().fadeOut();
   basketCart.parent().fadeToggle();
 });
@@ -60,6 +76,21 @@ cartCase.on("click", function(e) {
   if (numOfItems === 0) {
     basketCounter.addClass("hidden");
     basketCart.parent().fadeOut();
+  }
+});
+
+//remove Element in Favorite
+likeCase.on("click", function(e) {
+  let numOfItems = likeCase.children().length;
+  if (e.target.className === "basket-cart_close") {
+    e.target.parentElement.remove();
+    numOfItems--;
+    likeQuantity.text(numOfItems);
+    likeCounter.text(numOfItems);
+  }
+  if (numOfItems === 0) {
+    likeCounter.addClass("hidden");
+    likeCart.parent().fadeOut();
   }
 });
 
@@ -83,6 +114,7 @@ navSelectBtn.on("keypress", function(e) {
 // functions
 
 function animateMenu() {
+  likeCart.parent().fadeOut();
   basketCart.parent().fadeOut();
   signForm.parent().fadeOut();
   navSelectBtn.addClass("active");
